@@ -1,0 +1,24 @@
+/*COMMENTs*/ 
+/*COMMENTS*/
+/*COMMENTS*/
+
+
+/* Body */
+body {
+  background-color: rgb(38, 196, 217);
+}
+
+
+/* h1 styling */
+h1 {
+    background-color: blueviolet;
+    color: blue;
+    border: 50px solid rgb(255, 106, 0);
+    outline: 10px solid rgb(65, 29, 12);
+}
+
+
+/* paragraph styling */
+p {
+  color: red;
+}
