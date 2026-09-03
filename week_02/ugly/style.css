@@ -22,3 +22,11 @@ h1 {
 p {
   color: red;
 }
+
+
+h2 {
+  flex-flow: column;
+  column-count: 2;
+  
+
+}

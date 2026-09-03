@@ -1,0 +1,43 @@
+/* week_03/portal/styles.css */
+
+
+/* body styling */
+body {
+    background-color: silver;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+
+/* header 1 */
+h1{
+    font-size: 45px;
+}
+
+
+/* header container */
+.header-container{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* gallery container */
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    
+}
+
+
+/* gallery pic class */
+.gallerypic{
+    border: 6px solid rgba(100, 100, 100, 0.889);
+    border-radius: 20px;
+    max-width: 350px;
+}
+
