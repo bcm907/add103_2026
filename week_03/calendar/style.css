@@ -1,3 +1,37 @@
 /* WEEK 3 CALENDAR CSS */
 /* file path: add103_2026/week_03/calendar/styles.css */
 
+table {
+    border-collapse: collapse;
+    width: 75%;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+} /* This targets the <table> element directly to control border layout and size */
+
+th,td {
+    border: 1px solid #5a5858;
+    padding: 20px;
+    border-width: 10px;
+    text-align: center;
+    height: 80px;
+
+} /* The comma (,) allows you to group selectors, applying these border and padding styles to all <th scope="row"> and <td> tags */
+
+th {
+    height: 20px;
+    background-color: rgb(153, 190, 223);
+}
+
+tr:nth-child(even) {
+    background-color:aliceblue
+}
+
+
+
+
+
+
+.empty-day {
+    background-color: #f5f5f5;
+    color: #444444;
+    font-style: italic;
+} /* This targets table cells carrying class="empty-day" to style non-active calendar dates */
