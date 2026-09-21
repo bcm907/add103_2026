@@ -1,0 +1,53 @@
+/* WEEK 5A gallery */
+
+:root {
+    --primary-color: #8CA9C4;
+    --bg-color: #1e1d1b;
+    --panel-color: #2A2926;
+    --border-color: #3D3B37;
+    --text-color: #EDEAE5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 30px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
