@@ -1,0 +1,50 @@
+/* WEEK 4A STYLES */
+/* file path: add103_2026/week_04/outline/styles.css */
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 40px;
+    background-color: #f3f2ef;
+
+}
+
+/* Outermost UL */
+ul {
+    list-style-type:square;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+/* Nested ordered lists */
+ol {
+    list-style-type:upper-roman;
+    padding-left: 30px; 
+    margin-bottom: 10px;
+
+}
+
+
+/* Deepest nested unordered lists */
+ol ul{
+    list-style-type: circle;
+    padding-left: 20px;
+    margin-bottom: 5px;
+
+}
+
+
+li {
+    margin-bottom: 6px;
+    padding-left: 4px;
+
+
+}
+
+h1 {
+    color: #5c7a94;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 10px;
+}

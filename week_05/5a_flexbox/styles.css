@@ -1,0 +1,55 @@
+/* WEEK 5A FLEXBOX */
+/* file path */
+
+*{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary-dark: rgb(14,23,23);
+    --accent: rgb(42,5,96);
+    --primary-light: rgb(184, 185, 181)
+}
+
+body{
+    background-color:var(--primary-dark);
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: var(--accent);
+}
+
+
+.container div {
+    background-color: var(--primary-light);
+}
+
+
+
+
+.card {
+    background: var(--primary-dark);
+    color: var(--primary-light);
+    width: 30%;
+    min-height: 150px
+
+}
+
+h1{
+
+}
+
+
+
+.card img{
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    
+}
