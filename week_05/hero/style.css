@@ -1,5 +1,5 @@
 /* WEEK 5B STYLES */
-/* file path: add103_2026/week_05/hero/styles.css */
+/* file path: add103_2026/week_05/hero/style.css */
 
 :root {
     --primary-color: #5C7A94;
@@ -80,6 +80,6 @@ body {
 footer{
     text-align: center;
     padding: 20px;
-    font-size: 10px;
+    font-size: 12px;
     color: var(--primary-color)
 }
