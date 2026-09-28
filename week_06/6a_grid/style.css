@@ -84,13 +84,13 @@ footer {
 }
 
 footer a {
-    color #5ef2b0;
+    color: #5ef2b0;
     font-weight: bold;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-    
+
 }
 
