@@ -1,5 +1,5 @@
-/* WEEK6A: GRID LAYOUT */
-/* file path: add103_2026/week_06/6a_grid/style.css */
+/* WEEK7b: GRID LAYOUT */
+/* file path: add103_2026/week_07/7b_respponsephoto/style.css */
 
 
 body{
@@ -56,7 +56,7 @@ main {
 /* GRID PARENT */
 .photo-wall {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 15px;
     grid-auto-rows: 250px;
 }
@@ -93,4 +93,22 @@ footer a:hover {
     text-decoration: underline;
 
 }
+
+
+/* TABLET VIEW: 2 COLS */
+@media (min-width: 600px;) {
+    .photo-wall {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+/* DESKTOP VIEW: 3 COLS */
+@media (min-width:900px) {
+    .photo-wall {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
 
