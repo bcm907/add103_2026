@@ -1,0 +1,104 @@
+/* WEEK 7A PROFILE CARD */
+/*file path: add103_2026/week_07/7a_profilecard/index.html */
+
+:root {
+    --primary-color: #2eff93a2;
+    --bg-color: #1e1d1b;
+    --panel-color: #2A2926;
+    --border-color: #3D3B37;
+    --text-color: #EDEAE5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: var(--panel-color);
+    border: 5px solid var(--border-color);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(94, 242, 176, 0.3)
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    max-width: 100%;
+    border: 2px solid var(--primary-color);
+        box-shadow: 0 0 15px rgba(94, 169, 196, 0.6);
+    
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.profile-info h2 {
+    color: #d1d1d1c7;
+    font-size: 24px;
+
+}
+
+.profile-info p {
+    line-height: 1.2;
+
+}
+
+@media (min-width: 700px) {
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        max-width:700px;
+
+
+    }
+
+    .avatar {
+        margin: 0;
+        flex-shrink: 0;
+    }
+}
+
+footer {
+    background-color: var(--panel-color);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+
+}
+
+
+
