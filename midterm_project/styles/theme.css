@@ -1,43 +1,26 @@
 /*
 ----------
 Path: midterm_project/styles/theme.css
-Index: N/A
 
 
-
-Every colour the site uses lives here. Change one and every page follows.
-style.css reads these; you should not need to open it to recolour anything.
-
-----------
 ***VARIABLES USED***
-
 bg = Background; behind everything
 surface = Cards and shaded strips
 text = Headings and Paragraphs
 muted = Captions, Footer
 border = Borders and Rules
 accent = Links and Buttons
-acent-text = Text printed on a button
+accent-text = Text printed on a button
+
+@media (prefers-color-scheme: dark) = Dark Mode
 
 
 
-
-@medea (prefers-color-scheme: dark) = Dark Mode
-
-
-----------
-***OTHER NOTES***
-
-N/a
+NOTES:
 
 
 
-----------
 */
-
-
-
-
 
 /* Default  */
 
@@ -69,6 +52,29 @@ N/a
   }
 
 }
+
+
+/* SITE NAV RESPONSIVE */
+
+@media (max-width: 699px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.site header .site-nav ul {
+  flex-direction: column;
+  gap: 10px;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
