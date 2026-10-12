@@ -1,112 +1,198 @@
 <!doctype html>
+
+<!-- 
+📚 PAGE: Coursework
+📁 FILE: midterm_project/pages/coursework/coursework.html
+
+PURPOSE:
+  Organizes weekly class work and coursework separately from the
+  future portfolio/projects section.
+
+  LINKED PAGES:
+  - Home: ../../index.html
+  - About: ../about/about.html
+  - Contact: ../contact/contact.html
+
+  NOTES:
+  - This page is two folders below midterm_project.
+  - Shared files use ../../ in their paths.
+
+
+-->
+
 <html lang="en">
   <head>
+    <!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and CSS files -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coursework — Welcome!</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Page title and favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
+    <title>Coursework — Welcome!</title>
+
+    <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
     <link rel="stylesheet" href="../../styles/pages/coursework.css">
   </head>
-  <body class="page-coursework">
+  <!-- ⚙️ END PAGE SETUP -->
 
-<!-- SITE NAV HEADER -->
 
-    <header class="site-header">
-      <a class="site-title" href="index.html">Welcome!</a>
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="../coursework/coursework.html">coursework</a></li>
-          <li><a href="../about/about.html">About</a></li>
-          <li><a href="../contact/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<body class="page-coursework">
 
-<!-- BEGIN MAIN -->
-<!-- SECTION -->
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <h2>Heading</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <!-- 🗺️ SITE HEADER: Website title and main navigation -->
+  <header class="site-header">
+    <!-- Return to homepage -->
+    <a class="site-title" href="../../index.html">Welcome!</a>
+
+    <!-- Nav links relative to the coursework folder. -->
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="coursework.html" aria-current="page">Coursework</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 🗺️ END SITE HEADER -->
+
+<!-- 📝 BEGIN MAIN -->
+  <main>
+
+
+    <!-- 📚 INTRO: Overview of the coursework page -->
+    <section class="section coursework-intro">
+      <div class="container">
+        <h1>Coursework</h1>
+
+        <p>
+          This page contains weekly class exercises, assignments, and coursework projects.
+        </p>
+      </div>
+    </section>
+    <!-- 📚 END INTRO -->
+
+    <!-- SECTION 1 -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="row row--2">
+          <article class="card">
+            <h2>Section 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
+
+          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
+            <div class="ph">
+              PLACEHOLDER<br>
+              1600x900
+            </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-<!-- SECTION -->
+    <!-- SECTION 2 -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="row row--2">
+          <article class="card">
+            <h2>Section 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
 
-      <section class="section section--tinted">
-        <div class="container">
-          <div class="row row--2">
-            <article class="card">
-              <h2>Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <!-- Replace with: <img src="images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">PLACEHOLDER<br>1600x900</div>
-          </div>
+          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
+            <div class="ph">
+              PLACEHOLDER<br>
+              1600x900
+            </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-<!-- SECTION -->
 
-      <section class="section section--tinted">
-        <div class="container">
-          <div class="row row--2">
-            <article class="card">
-              <h2>Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <!-- Replace with: <img src="images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">PLACEHOLDER<br>1600x900</div>
-          </div>
+    <!-- SECTION 3 -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="row row--2">
+          <article class="card">
+            <h2>Section 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
+
+          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
+            <div class="ph">
+              PLACEHOLDER<br>
+              1600x900
+            </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-<!-- SECTION -->
+    <!-- SECTION 4 -->
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="row row--2">
+          <article class="card">
+            <h2>Section 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </article>
 
-      <section class="section section--tinted">
-        <div class="container">
-          <div class="row row--2">
-            <article class="card">
-              <h2>Heading</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <!-- Replace with: <img src="images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">PLACEHOLDER<br>1600x900</div>
-          </div>
+          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
+            <div class="ph">
+              PLACEHOLDER<br>
+              1600x900
+            </div>
         </div>
-      </section>
-
-<!-- SECTION -->
-
-      <section class="section section--tinted">
-        <div class="container">
-          <h2>Ready to talk?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="btn" href="#">Contact me</a>
-        </div>
-      </section>
-    </main>
-
-<!-- END MAIN -->
+      </div>
+    </section>
 
 
-<!-- FOOTER -->
 
-    <footer class="site-footer">
-      <p class="site-copy">© Welcome!</p>
-      <nav class="site-nav" aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="coursework.html" aria-current="page">coursework</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </footer>
+    <!-- 🚩 REPORT SECTION: Placeholder until form built; report
+    issues with site -->
+    <section class="section section--tinted">
+      <div class="container">
+        <h2>Site issues?</h2>
+        <p>
+            Use the link below to report any issues you're experiencing with the website and/or any specific pages. (WIP; not yet built, empty link)
+        </p>
+        <a class="btn" href="#">Report a Site Issue</a>
+      </div>
+    </section>
+    <!-- 🚩 END REPORT SECTION -->
 
-  </body>
+
+  </main>
+  <!-- 📝 END MAIN -->
+
+
+  <!-- 🦶 FOOTER -->
+  <footer class="site-footer">
+    <p class="site-copy">© Welcome!</p>
+
+    <nav class="site-nav" aria-label="Footer">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="coursework.html" aria-current=""page>Coursework</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <!-- 🦶 END FOOTER -->
+
+</body>
 </html>
