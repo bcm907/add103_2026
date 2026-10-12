@@ -1,22 +1,55 @@
 <!doctype html>
+
+<!-- 
+
+🏠 PAGE: HOMEPAGE
+📁 File: midterm_project/index.html
+
+PURPOSE: 
+main landing page; portfolio
+
+SITE SECTIONS:
+- WIP; portfolio projects
+- weekly coursework link; course portal
+- about information
+- contact information
+
+Checklist
+[x] HTML Structure
+[x] responsive layout
+[x] nav links
+[ ] create portfolio page
+[ ] replace placeholder content
+[ ] create report issue page and fix link
+[ ] run wave and validator checks
+-->
+
 <html lang="en">
   <head>
+
+<!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Page Title and Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicons/nali-favicon.ico">
     <title>Home — Welcome!</title>
+
+    <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/pages/home.css">
   </head>
+
+<!-- ⚙️ END PAGE SETUP -->
+
 <body class="page-home">
 
-<!-- BEGIN BODY -->
-
-<!--  SITE NAV HEADER -->
-
+    <!-- 🗺️ NAV HEADER: Site title and Nav -->
     <header class="site-header">
       <a class="site-title" href="index.html">Welcome!</a>
       <nav class="site-nav" aria-label="Main">
@@ -28,27 +61,31 @@
         </ul>
       </nav>
     </header>
+    <!-- 🗺️ END NAV HEADER -->
 
-<!-- END NAV HEADER -->
 
-<!-- MAIN -->
-    <!-- HERO SECTION -->
+    <!-- 📝 MAIN: information unique to homepage -->
     <main>
+
+      <!-- ⭐️ HERO: main intro visitors see first -->
       <section class="section">
         <div class="container">
           <h1>Heading</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </section>
+      <!-- ⭐️ END HERO -->
 
-      <!-- END HERO SECTION -->
-
-      <!-- BEGIN FEATURE CARDS -->
-
+      
+      <!-- 💼 FEATURE CARDS: project highlights -->
       <section class="section">
         <div class="container">
           <h2>Group name</h2>
+
+          <!-- CSS grid; becomes 3 columns on wider screens -->
           <div class="row row--3">
+
+            <!-- CARD 1 -->
             <article class="card">
               <h3>Entry</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -58,6 +95,8 @@
                 <li>Third item</li>
               </ul>
             </article>
+
+            <!-- CARD 2 -->
             <article class="card">
               <h3>Entry</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -67,6 +106,8 @@
                 <li>Third item</li>
               </ul>
             </article>
+          
+            <!-- CARD 3 -->
             <article class="card">
               <h3>Entry</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -79,11 +120,10 @@
           </div>
         </div>
       </section>
+      <!-- 💼 END FEATURE CARDS -->
 
-      <!-- END FEATURE CARDS -->
-
-      <!-- BEGIN REPORT SECTION -->
-
+      <!-- 🚩 REPORT SECTION: Placeholder until form built; report
+    issues with site -->
       <section class="section section--tinted">
         <div class="container">
           <h2>Site issues?</h2>
@@ -91,15 +131,15 @@
           <a class="btn" href="#">Report a Site Issue</a>
         </div>
       </section>
+      <!-- 🚩 END REPORT SECTION -->
+
     </main>
+    <!-- 📝 END MAIN -->
 
-      <!-- END REPORT SECTION -->
-    <!-- END MAIN -->
-
-    <!-- FOOTER -->
-
+    <!-- 🦶 FOOTER -->
     <footer class="site-footer">
       <p class="site-copy">© Welcome!</p>
+
       <nav class="site-nav" aria-label="Footer">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -109,10 +149,7 @@
         </ul>
       </nav>
     </footer>
-    
-    <!-- END FOOTER -->
-
-<!-- END BODY -->
+    <!-- 🦶 END FOOTER -->
 
 </body>
 </html>

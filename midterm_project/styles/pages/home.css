@@ -1,34 +1,17 @@
 /* 
+🏠 HOMEPAGE STYLES
 
-THEME FOR REFERENCE: 
-----------
-LIGHT MODE
+Theme styles are located in:
+../theme.css
 
-    --bg: #ffffff;
-    --surface: #f4f5f7;
-    --text: #1a1c1e;
-    --muted: #5c6166;
-    --border: #dfe2e6;
-    --accent: #3b6fe0;
-    --accent-text: #ffffff;
-
-----------
-DARK MODE
-
-    --bg: #1e1f20;
-    --surface: #262829;
-    --text: #e5e6e6;
-    --muted: #9a9b9c;
-    --border: #3a3b3c;
-    --accent: #6f9ef5;
-    --accent-text: #ffffff;
-
------------   
-
+This file is specifically for homepage styles
 */
 
-/* ---- basics ---- */
-* { box-sizing: border-box; }
+/* --- BASIC PAGE SETTINGS --- */
+* { 
+  box-sizing: border-box; 
+}
+
 body {
   margin: 0;
   font-family: Atkinson Hyperlegible, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -38,58 +21,76 @@ body {
   color: var(--text);
 }
 
-/* Headers */
 
-h1 { font-size: 36px; 
+/* --- HEADERS --- */
+h1 { 
+  font-size: 36px; 
 }
 
-h2 { font-size: 26px; 
+h2 { 
+  font-size: 26px; 
 }
 
-h3 { font-size: 19px;
+h3 { 
+  font-size: 19px;
 }
 
-
-/* Headers, Aside, and images */
-
-h1, h2, h3 { margin: 0 0 20px; line-height: 1.25; 
-}
-
-a { color: var(--accent); 
-}
-
-img { max-width: 100%; display: block; 
+h1, h2, h3 { 
+  margin: 0 0 20px; 
+  line-height: 1.25; 
 }
 
 
-/* ---- layout ---- */
+/* --- LINKS AND IMAGES --- */
+a { 
+  color: var(--accent); 
+}
+
+img { 
+  max-width: 100%;
+  display: block; 
+}
+
+
+/* --- MAIN LAYOUT --- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
-.section { padding: 72px 0; }
-.section--tinted { background: var(--surface); }
 
-/* ---- row: one column on a phone, more on a wider screen ---- */
+.section { 
+  padding: 72px 0; 
+}
+
+.section--tinted { 
+  background: var(--surface); 
+}
+
+/* --- GRID ROWS --- */
+/* 
+  Default is one column.
+  Media queries at bottom changes row--2 and row--3
+  to multiple columns on wider screens.
+*/
 .row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
-@media (min-width: 700px) {
-  .row--2 { grid-template-columns: repeat(2, 1fr); }
-  .row--3 { grid-template-columns: repeat(3, 1fr); }
-}
 
+
+/* --- FEATURE CARDS --- */
 .card {
+  height: 100%;
+  padding: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 20px;
 }
 
-/* ---- button ---- */
+
+/* --- BUTTONS --- */
 .btn {
   display: inline-block;
   padding: 12px 22px;
@@ -103,27 +104,51 @@ img { max-width: 100%; display: block;
 
 }
 
-/* ---- picture placeholder (delete these once you add real photos) ---- */
+/* --- PLACEHOLDER IMAGES AREA --- */
 .ph {
   height: 240px;
+  padding-top: 105px;
   background: var(--surface);
   border: 1px dashed var(--border);
   border-radius: 8px;
   color: var(--muted);
   font-size: 13px;
   text-align: center;
-  padding-top: 105px;
 }
-.ph--square { height: 260px; }
 
-.list { padding-left: 20px; margin: 0 0 20px; }
-.list li { margin-bottom: 6px; }
+.ph--square { 
+  height: 260px; 
+}
 
-/* ---- form ---- */
-.form { max-width: 480px; }
-.field { margin: 0 0 20px; }
-.field label { display: block; margin-bottom: 6px; }
-.field input, .field textarea {
+
+/* --- LISTS --- */
+
+.list { 
+  padding-left: 20px; 
+  margin: 0 0 20px; 
+}
+
+.list li { 
+  margin-bottom: 6px; 
+}
+
+
+/* --- FORM STYLES FOR FUTURE PAGES --- */
+.form { 
+  max-width: 480px; 
+}
+
+.field { 
+  margin: 0 0 20px; 
+}
+
+.field label { 
+  display: block; 
+  margin-bottom: 6px; 
+}
+
+.field input, 
+.field textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--border);
@@ -133,8 +158,10 @@ img { max-width: 100%; display: block;
   font: inherit;
 }
 
-/* ---- header and footer ---- */
-.site-header, .site-footer {
+
+/* --- HEADER AND FOOTER --- */
+.site-header, 
+.site-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -144,18 +171,27 @@ img { max-width: 100%; display: block;
   margin: 0 auto;
   padding: 20px;
 }
-.site-header { border-bottom: 1px solid var(--border); }
+
+.site-header { 
+  border-bottom: 1px solid var(--border); 
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
+
 .site-title {
   font-weight: bold;
   font-size: 18px;
   color: var(--text);
   text-decoration: none;
 }
-.site-copy { margin: 0; }
+
+.site-copy { 
+  margin: 0; 
+}
+
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -164,4 +200,27 @@ img { max-width: 100%; display: block;
   margin: 0;
   padding: 0;
 }
-.site-nav a { text-decoration: none; }
+
+.site-nav a { 
+  text-decoration: none; 
+}
+
+
+/* --- ACCESSIBILITY --- */
+.page-home a:focus-visible,
+.page-home .btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* RESPONSIVE LAYOUT */
+@media (min-width: 700px) {
+  .row--2 { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .row--3 { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
