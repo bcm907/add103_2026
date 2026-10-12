@@ -1,69 +1,150 @@
 <!doctype html>
+<!-- 
+👤 PAGE: About
+📁 FILE: midterm_project/pages/about/about.html
+
+PURPOSE:
+introduce website and provide background information
+
+NOTES:
+- This page is two folders below midterm_project
+- shared files use ../../ in their paths
+- images area is currently a placeholder
+
+-->
+
 <html lang="en">
   <head>
+
+
+<!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Welcome!</title>
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <!-- Page Title and Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
+    <title>Home — Welcome!</title>
+
+
+    <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
-    <link rel="stylesheet" href="../../styles/pages/about.css">
+    <link rel="stylesheet" href="../../styles/pages/home.css">
   </head>
-  <body class="page-about">
+<!-- ⚙️ END PAGE SETUP -->
 
 
+<body class="page-about">
 
+
+    <!-- 🗺️ NAV HEADER: Site title and Nav -->
     <header class="site-header">
-      <a class="site-title" href="index.html">Welcome!</a>
+      <!-- Link returns to homepage -->
+      <a class="site-title" href="../../index.html">Welcome!</a>
+
+      <!-- Nav links relative to folder -->
       <nav class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="../coursework/coursework.html">coursework</a></li>
-          <li><a href="../about/about.html" aria-current="page">About</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../coursework/coursework.html">Coursework</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <!-- 🗺️ END SITE HEADER -->
 
+
+    <!-- 📝 MAIN CONTENT: Information unique to the About page -->
     <main>
-      <section class="section">
+
+
+      <!-- 👋 INTRO: Overview of page -->
+      <section class="section about-intro">
         <div class="container">
-          <h2>Heading</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h1>About</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
       </section>
+      <!-- 👋 END INTRO -->
+
+
+      <!-- 👤 PROFILE: Personal profile image and info -->
       <section class="section">
         <div class="container">
           <div class="row row--2">
-            <!-- Replace with: <img src="images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph ph--square">PLACEHOLDER<br>800x800</div>
+
+
+            <!-- PROFILE IMG -->
+            <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
+            <div class="ph ph--square">
+              PLACEHOLDER
+              <br>
+              800x800
+            </div>
+
+
+            <!-- PROFILE INFO -->
             <article class="card">
               <h1>Your Name</h1>
               <h3>What you do</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </article>
+          
+
           </div>
         </div>
       </section>
+      <!-- 👤 END PROFILE SECTION -->
+
+
+      <!-- 🚩 REPORT SECTION: Placeholder until form built; report
+    issues with site -->
       <section class="section section--tinted">
         <div class="container">
-          <h2>Ready to talk?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="btn" href="#">Contact me</a>
+          <h2>Site issues?</h2>
+          <p>
+            Use the link below to report any issues you're experiencing with the website and/or any specific pages. (WIP; not yet built, empty link)
+          </p>
+          <a class="btn" href="#">Report a Site Issue</a>
         </div>
       </section>
-    </main>
+      <!-- 🚩 END REPORT SECTION -->
 
+
+    </main>
+    <!-- 📝 END MAIN -->
+
+
+    <!-- 🦶 FOOTER -->
     <footer class="site-footer">
       <p class="site-copy">© Welcome!</p>
+
+
       <nav class="site-nav" aria-label="Footer">
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="../coursework/coursework.html">coursework</a></li>
-          <li><a href="../about/about.html" aria-current="page">About</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../coursework/coursework.html">Coursework</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
       </nav>
     </footer>
+    <!-- 🦶 END FOOTER -->
 
-  </body>
+
+</body>
 </html>

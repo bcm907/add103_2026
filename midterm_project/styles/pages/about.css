@@ -1,14 +1,20 @@
-/* Welcome! — layout and spacing
-   Colours come from theme.css. Change them there, not here.
+/* 
+👤 ABOUT PAGE STYLES
+
+Theme styles are located in
+../../styles/theme.css
    
-OTHER NOTES: 
-   
-   
+
+NOTES:
+- 
    
 */
 
-/* ---- basics ---- */
-* { box-sizing: border-box; }
+/* --- BASIC PAGE SETTINGS --- */
+* { 
+  box-sizing: border-box; 
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -17,14 +23,40 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-h1 { font-size: 36px; }
-h2 { font-size: 26px; }
-h3 { font-size: 19px; }
-h1, h2, h3 { margin: 0 0 20px; line-height: 1.25; }
-a { color: var(--accent); }
-img { max-width: 100%; display: block; }
 
-/* ---- layout ---- */
+
+/* --- HEADERS --- */
+h1 { 
+  font-size: 36px; 
+}
+
+h2 { 
+  font-size: 26px; 
+}
+
+h3 { 
+  font-size: 19px; 
+}
+
+h1, 
+h2, 
+h3 { 
+  margin: 0 0 20px; 
+  line-height: 1.25; 
+}
+
+
+/* --- LINKS AND IMAGES --- */
+a { 
+  color: var(--accent); 
+}
+
+img { 
+  max-width: 100%; display: block; 
+}
+
+
+/* --- MAIN LAYOUT --- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -33,25 +65,34 @@ img { max-width: 100%; display: block; }
 .section { padding: 72px 0; }
 .section--tinted { background: var(--surface); }
 
-/* ---- row: one column on a phone, more on a wider screen ---- */
+/* ABOUT INTRO */
+.about-intro {
+  text-align: left;
+}
+
+
+/* GRID ROWS */
+/*
+  Defualt is one column.
+  Media queries at bottom creates two columns on wider screens.
+ */
 .row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
-@media (min-width: 700px) {
-  .row--2 { grid-template-columns: repeat(2, 1fr); }
-  .row--3 { grid-template-columns: repeat(3, 1fr); }
-}
 
+
+/* --- FEATURE CARDS --- */
 .card {
+  height: 100%;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
 }
 
-/* ---- button ---- */
+/* --- BUTTONS --- */
 .btn {
   display: inline-block;
   padding: 12px 22px;
@@ -64,7 +105,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
 }
 
-/* ---- picture placeholder (delete these once you add real photos) ---- */
+/* --- PLACEHOLDER IMAGES AREA --- */
 .ph {
   height: 240px;
   background: var(--surface);
@@ -77,10 +118,12 @@ img { max-width: 100%; display: block; }
 }
 .ph--square { height: 260px; }
 
+
+/* --- LISTS --- */
 .list { padding-left: 20px; margin: 0 0 20px; }
 .list li { margin-bottom: 6px; }
 
-/* ---- form ---- */
+/* --- FORM STYLES FOR FUTURE PAGES--- */
 .form { max-width: 480px; }
 .field { margin: 0 0 20px; }
 .field label { display: block; margin-bottom: 6px; }
@@ -94,8 +137,10 @@ img { max-width: 100%; display: block; }
   font: inherit;
 }
 
-/* ---- header and footer ---- */
-.site-header, .site-footer {
+
+/* --- HEADER AND FOOTER --- */
+.site-header, 
+.site-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -105,18 +150,27 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
   padding: 20px;
 }
-.site-header { border-bottom: 1px solid var(--border); }
+
+.site-header { 
+  border-bottom: 1px solid var(--border); 
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
+
 .site-title {
   font-weight: bold;
   font-size: 18px;
   color: var(--text);
   text-decoration: none;
 }
-.site-copy { margin: 0; }
+
+.site-copy { 
+  margin: 0; 
+}
+
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -125,4 +179,27 @@ img { max-width: 100%; display: block; }
   margin: 0;
   padding: 0;
 }
-.site-nav a { text-decoration: none; }
+
+.site-nav a { 
+  text-decoration: none; 
+}
+
+
+/* --- ACCESSIBILITY --- */
+.page-home a:focus-visible,
+.page-home .btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* RESPONSIVE LAYOUT */
+@media (min-width: 700px) {
+  .row--2 { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .row--3 { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
