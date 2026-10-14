@@ -28,21 +28,23 @@ body {
 
 /* --- HEADERS --- */
 h1 { 
-  font-size: 36px; 
+  font-size: 52px; 
 
 }
 
 h2 { 
-  font-size: 26px; 
+  font-size: 38px; 
 }
 
 h3 { 
-  font-size: 19px;
+  font-size: 30px;
 }
 
 h1, h2, h3 { 
-  margin: 0 0 20px; 
+  margin: 0 0 12px; 
   line-height: 1.25; 
+  font-family: "Jersey 10", "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
 }
 
 
@@ -66,7 +68,7 @@ img {
 }
 
 .section { 
-  padding: 72px 0; 
+  padding: 30px 0; 
 
 }
 

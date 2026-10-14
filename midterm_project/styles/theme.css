@@ -73,13 +73,16 @@ NOTES:
 
 .site-header { 
   border: 4px ridge var(--teal); 
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--surface);
+  background-image: url("../assets/images/aurorabanner.png");
+  background-size: cover;
+  background-position: center top;
 }
 
 .site-footer {
   border: 4px ridge var(--teal); 
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--surface);
   color: var(--muted);
 
@@ -90,6 +93,10 @@ NOTES:
   font-size: 18px;
   color: var(--text);
   text-decoration: none;
+  background: var(--surface);
+  border: 3px ridge var(--teal);
+  border-radius: 10px;
+  padding: 6px 10px;
 }
 
 .site-title img {
@@ -102,6 +109,14 @@ NOTES:
   margin: 0; 
 }
 
+/* .site-nav {
+background: var(--surface);
+border: 3px ridge var(--teal);
+border-radius: 10px;
+padding: 10px 14px;
+
+} */
+
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -112,16 +127,17 @@ NOTES:
 }
 
 .site-nav a { 
+  background: var(--surface);
   text-decoration: none; 
-  padding: 6px 14px;
-  border: 2px ridge var(--border);
-  border-radius: 8px;
-
+  padding: 6px 12px;
+  border: 3px ridge var(--border);
+  border-radius: 10px;
+  border-color: var(--teal);
 
 }
 
 .site-nav a:hover {
-  border-color: var(--teal);
+  border-color: var(--red);
 }
 
 h2 {
@@ -130,16 +146,26 @@ h2 {
 }
 
 
+
+/* FRAMES */
+
+
 .frame {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 15px;
   border: 4px ridge var(--teal);
   border-radius: 8px;
 
-
 }
 
+.banner {
+  height: 180px;
+  object-fit: cover;
+  object-position: center 10%;
+  margin-top: 0;
+  margin-bottom: 15px;
 
+}
 
 
 
