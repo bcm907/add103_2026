@@ -32,8 +32,9 @@ NOTES:
   --border: #dfe2e6;
   --accent: #3b6fe0;
   --accent-text: #ffffff;
+  --teal: #0b7f88;
+  --red: #c4271d;
   
-
 }
 
 
@@ -48,6 +49,8 @@ NOTES:
     --border: #3f464f;
     --accent: #e6e8eb;
     --accent-text: #1c1e22;
+    --teal: #19d3dc;
+    --red: #e8453c;
   
   }
 
@@ -68,7 +71,7 @@ NOTES:
 }
 
 .site-header { 
-  border-bottom: 1px solid var(--border); 
+  border-bottom: 4px solid var(--teal); 
 }
 
 .site-footer {
