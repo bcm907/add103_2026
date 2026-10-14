@@ -92,9 +92,25 @@ img {
   padding: 20px;
   background: var(--surface);
   border: 4px ridge var(--teal);
-  border-left: 6px ridge var(--red);
+  border-left-color: var(--red);
+  border-bottom-color: var(--red);
   border-radius: 8px;
 }
+
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px ridge var(--teal);
+  border-radius: 6px;
+  border-left-color: var(--red);
+  border-bottom-color: var(--red);
+
+
+}
+
 
 .reportcard {
   height: 100%;
@@ -102,6 +118,9 @@ img {
   background: var(--surface);
   border: 6px ridge var(--teal);
   border-radius: 8px;
+  border-left-color: var(--red);
+  border-bottom-color: var(--red);
+
 }
 
 
