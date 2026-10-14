@@ -105,13 +105,6 @@ NOTES:
   margin: 0; 
 }
 
-/* .site-nav {
-background: var(--surface);
-border: 3px ridge var(--teal);
-border-radius: 10px;
-padding: 10px 14px;
-
-} */
 
 .site-nav ul {
   display: flex;
@@ -141,11 +134,29 @@ h2 {
 
 }
 
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 3px ridge var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  border-color: var(--teal);
+  color: var(--text);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.btn a:hover {
+  border-color: var(--red);
+
+}
+
 
 
 /* FRAMES */
-
-
 .frame {
   width: 100%;
   margin-top: 15px;
@@ -163,10 +174,7 @@ h2 {
 
 }
 
-
-
 /* SITE NAV RESPONSIVE */
-
 @media (max-width: 699px) {
   .site-header {
     flex-direction: column;
