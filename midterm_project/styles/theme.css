@@ -107,6 +107,18 @@ NOTES:
 
 .site-nav a { 
   text-decoration: none; 
+  padding: 6px 14px;
+  border: 2px solid var(--border);
+
+}
+
+.site-nav a:hover {
+  border-color: var(--teal);
+}
+
+h2 {
+  color: var(--teal);
+  
 }
 
 
