@@ -65,18 +65,24 @@ NOTES:
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 95%;
+  max-width: 1060px;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 .site-header { 
-  border-bottom: 4px solid var(--teal); 
+  border: 4px ridge var(--teal); 
+  border-radius: 8px;
+  background: var(--surface);
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
+  border: 4px ridge var(--teal); 
+  border-radius: 8px;
+  background: var(--surface);
   color: var(--muted);
+
 }
 
 .site-title {
@@ -99,7 +105,7 @@ NOTES:
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -108,7 +114,9 @@ NOTES:
 .site-nav a { 
   text-decoration: none; 
   padding: 6px 14px;
-  border: 2px solid var(--border);
+  border: 2px ridge var(--border);
+  border-radius: 8px;
+
 
 }
 
@@ -118,8 +126,19 @@ NOTES:
 
 h2 {
   color: var(--teal);
-  
+
 }
+
+
+.frame {
+  width: 100%;
+  margin-top: 24px;
+  border: 4px ridge var(--teal);
+  border-radius: 8px;
+
+
+}
+
 
 
 
