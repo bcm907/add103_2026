@@ -1,5 +1,5 @@
 /*
-📚 COURSEWORK PAGE STYLES
+📚 BLOG PAGE STYLES
 
 Theme styles come from:
 ../../styles/theme.css
@@ -74,8 +74,8 @@ img {
 }
 
 
-/* ---- COURSEWORK INTRODUCTION ---- */
-.coursework-intro {
+/* ---- BLOG INTRODUCTION ---- */
+.blog-intro {
   text-align: left;
 }
 
@@ -92,7 +92,7 @@ img {
 }
 
 
-/* ---- COURSEWORK CARDS ---- */
+/* ---- BLOG CARDS ---- */
 .card {
   height: 100%;
   background: var(--surface);
@@ -218,8 +218,8 @@ img {
 
 
 /* ---- ACCESSIBILITY ---- */
-.page-coursework a:focus-visible,
-.page-coursework .btn:focus-visible {
+.page-blog a:focus-visible,
+.page-blog .btn:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }

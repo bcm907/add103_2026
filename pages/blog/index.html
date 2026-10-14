@@ -1,11 +1,11 @@
 <!doctype html>
 
 <!-- 
-📚 PAGE: Coursework
-📁 FILE: midterm_project/pages/coursework/coursework.html
+📚 PAGE: Blog
+📁 FILE: pages/blog/index.html
 
 PURPOSE:
-  Organizes weekly class work and coursework separately from the
+  Blog: a mix of weekly coursework posts and periodic posts, separate from the
   future portfolio/projects section.
 
   LINKED PAGES:
@@ -14,7 +14,7 @@ PURPOSE:
   - Contact: ../contact/contact.html
 
   NOTES:
-  - This page is two folders below midterm_project.
+  - This page is two folders below the site root.
   - Shared files use ../../ in their paths.
 
 
@@ -33,16 +33,16 @@ PURPOSE:
 
     <!-- Page title and favicon -->
     <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
-    <title>Coursework — Welcome!</title>
+    <title>Blog — Welcome!</title>
 
     <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
-    <link rel="stylesheet" href="../../styles/pages/coursework.css">
+    <link rel="stylesheet" href="../../styles/pages/blog.css">
   </head>
   <!-- ⚙️ END PAGE SETUP -->
 
 
-<body class="page-coursework">
+<body class="page-blog">
 
 
   <!-- 🗺️ SITE HEADER: Website title and main navigation -->
@@ -50,11 +50,11 @@ PURPOSE:
     <!-- Return to homepage -->
     <a class="site-title" href="../../index.html">Welcome!</a>
 
-    <!-- Nav links relative to the coursework folder. -->
+    <!-- Nav links relative to the blog folder. -->
     <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="coursework.html" aria-current="page">Coursework</a></li>
+        <li><a href="index.html" aria-current="page">Blog</a></li>
         <li><a href="../about/about.html">About</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
       </ul>
@@ -66,13 +66,13 @@ PURPOSE:
   <main>
 
 
-    <!-- 📚 INTRO: Overview of the coursework page -->
-    <section class="section coursework-intro">
+    <!-- 📚 INTRO: Overview of the blog page -->
+    <section class="section blog-intro">
       <div class="container">
-        <h1>Coursework</h1>
+        <h1>Blog</h1>
 
         <p>
-          This page contains weekly class exercises, assignments, and coursework projects.
+          This page contains weekly coursework posts alongside periodic posts, tips, and notes.
         </p>
       </div>
     </section>
@@ -169,7 +169,7 @@ PURPOSE:
         <p>
             Use the link below to report any issues you're experiencing with the website and/or any specific pages. (WIP; not yet built, empty link)
         </p>
-        <a class="btn" href="#">Report a Site Issue</a>
+        <a class="btn" href="../contact/contact.html">Report a Site Issue</a>
       </div>
     </section>
     <!-- 🚩 END REPORT SECTION -->
@@ -186,7 +186,7 @@ PURPOSE:
     <nav class="site-nav" aria-label="Footer">
       <ul>
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="coursework.html" aria-current=""page>Coursework</a></li>
+        <li><a href="index.html" aria-current="page">Blog</a></li>
         <li><a href="../about/about.html">About</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
       </ul>

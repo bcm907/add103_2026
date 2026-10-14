@@ -74,8 +74,7 @@ NOTES:
   background-image: url("../assets/images/aurorabanner.png");
   background-size: cover;
   background-position: center top;
-  border-left-color: var(--red);
-  border-bottom-color: var(--red);
+
 
 
 }
@@ -84,9 +83,6 @@ NOTES:
   border: 4px ridge var(--teal); 
   border-radius: 10px;
   background: var(--surface);
-  border-left-color: var(--red);
-  border-bottom-color: var(--red);
-
 
 
 }
@@ -100,8 +96,7 @@ NOTES:
   border: 3px ridge var(--teal);
   border-radius: 10px;
   padding: 6px 10px;
-  border-left-color: var(--red);
-  border-bottom-color: var(--red);
+
 
 }
 
@@ -144,6 +139,29 @@ h2 {
 
 }
 
+
+
+
+/* 
+.button {
+
+
+ 
+
+
+
+
+
+  box-shadow: 0 9px #999;
+}
+
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+
+
 /* --- BUTTONS --- */
 .btn {
   display: inline-block;
@@ -156,6 +174,11 @@ h2 {
   font: inherit;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
+  box-shadow: 0 9px #999;
+
+  /* font-size: 24px;??? */
+
 
 }
 
