@@ -83,6 +83,12 @@ NOTES:
   text-decoration: none;
 }
 
+.site-title img {
+  height: 100px; 
+  margin: 0;
+
+}
+
 .site-copy { 
   margin: 0; 
 }
@@ -116,15 +122,4 @@ NOTES:
   gap: 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
