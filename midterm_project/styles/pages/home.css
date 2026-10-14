@@ -29,6 +29,7 @@ body {
 /* --- HEADERS --- */
 h1 { 
   font-size: 36px; 
+
 }
 
 h2 { 
@@ -162,52 +163,6 @@ img {
   font: inherit;
 }
 
-
-/* --- HEADER AND FOOTER --- */
-.site-header, 
-.site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.site-header { 
-  border-bottom: 1px solid var(--border); 
-}
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-}
-
-.site-title {
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.site-copy { 
-  margin: 0; 
-}
-
-.site-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav a { 
-  text-decoration: none; 
-}
 
 
 /* --- ACCESSIBILITY --- */
