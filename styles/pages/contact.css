@@ -1,14 +1,15 @@
-/* Welcome! — layout and spacing
-   Colours come from theme.css. Change them there, not here. 
+/* 
+ CONTACT PAGE STYLES
+
+Theme styles are located in
+../../styles/theme.css
    
-OHER NOTES: 
-   
-   
-   
-   
-   
+
+NOTES:
+- 
    
 */
+
 
 /* ---- basics ---- */
 * { box-sizing: border-box; }
