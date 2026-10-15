@@ -6,13 +6,7 @@
 PURPOSE:
 introduce website and provide background information
 
-NOTES:
-- This page is two folders below midterm_project
-- shared files use ../../ in their paths
-- images area is currently a placeholder
-
 -->
-
 <html lang="en">
   <head>
 
@@ -21,71 +15,69 @@ NOTES:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&display=swap" rel="stylesheet">
 
     <!-- Page Title and Favicon -->
     <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
-    <title>Home — Welcome!</title>
-
+    <title>About - BCnDNS Labs</title>
 
     <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
-    <link rel="stylesheet" href="../../styles/pages/home.css">
+    <link rel="stylesheet" href="../../styles/pages/about.css">
   </head>
 <!-- ⚙️ END PAGE SETUP -->
+
+
+<body class="page-home">
+
+
+    <!-- 🗺️ NAV HEADER: Site title and Nav -->
+    <header class="site-header">
+      <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
+      <a class="site-title" href="../../index.html">
+        <img src="../../assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
+      </a>
+
+
+      <!-- Nav links relative to folder -->
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about/about.html" aria-current="page">About</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 🗺️ END NAV HEADER -->
 
 
 <body class="page-about">
 
 
-    <!-- 🗺️ NAV HEADER: Site title and Nav -->
-    <header class="site-header">
-      <!-- Link returns to homepage -->
-      <a class="site-title" href="../../index.html">Welcome!</a>
-
-      <!-- Nav links relative to folder -->
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="../contact/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- 🗺️ END SITE HEADER -->
-
-
     <!-- 📝 MAIN CONTENT: Information unique to the About page -->
-    <main>
-
-
-      <!-- 👋 INTRO: Overview of page -->
-      <section class="section about-intro">
-        <div class="container">
-          <h1>About</h1>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </section>
-      <!-- 👋 END INTRO -->
+    <main>s
 
 
       <!-- 👤 PROFILE: Personal profile image and info -->
       <section class="section">
         <div class="container">
           <div class="row row--2">
+
+
+
+
+
+            <!-- PROFILE INFO -->
+            <article class="card">
+              <h2>Your Name</h2>
+              <h3>What you do</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </article>
+
 
 
             <!-- PROFILE IMG -->
@@ -95,14 +87,6 @@ NOTES:
               <br>
               800x800
             </div>
-
-
-            <!-- PROFILE INFO -->
-            <article class="card">
-              <h1>Your Name</h1>
-              <h3>What you do</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
           
 
           </div>
@@ -113,13 +97,15 @@ NOTES:
 
       <!-- 🚩 REPORT SECTION: Placeholder until form built; report
     issues with site -->
-      <section class="section section--tinted">
+      <section class="section">
         <div class="container">
-          <h2>Site issues?</h2>
-          <p>
-            Use the link below to report any issues you're experiencing with the website and/or any specific pages. (WIP; not yet built, empty link)
-          </p>
-          <a class="btn" href="#">Report a Site Issue</a>
+          <div class="reportcard">
+            <h2>Site issues?</h2>
+            <p>
+            Spot something broken on the site? Let me know below!
+            </p>
+            <a class="btn" href="../contact/contact.html">Report a Site Issue</a>
+          </div>
         </div>
       </section>
       <!-- 🚩 END REPORT SECTION -->
@@ -131,14 +117,13 @@ NOTES:
 
     <!-- 🦶 FOOTER -->
     <footer class="site-footer">
-      <p class="site-copy">© Welcome!</p>
-
+      <p class="site-copy">© BCnDNS_Labs</p>
 
       <nav class="site-nav" aria-label="Footer">
         <ul>
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="../about/about.html">About</a></li>
           <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
       </nav>
