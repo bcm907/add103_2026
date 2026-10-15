@@ -52,6 +52,20 @@ NOTES:
 
 }
 
+/* --- BASIC PAGE SETTINGS --- */
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font-family: Atkinson Hyperlegible, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
 
 /* --- HEADER AND FOOTER --- */
 .site-header, 
@@ -134,31 +148,24 @@ NOTES:
   border-color: var(--red);
 }
 
-h2 {
+
+
+/* --- HEADERS --- */
+h1 { 
+  font-size: 52px; 
+
+}
+
+h2 { 
+  font-size: 38px; 
   color: var(--teal);
+}
 
+h3 { 
+  font-size: 30px;
 }
 
 
-
-
-/* 
-.button {
-
-
- 
-
-
-
-
-
-  box-shadow: 0 9px #999;
-}
-
-.button:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-} */
 
 
 
@@ -175,9 +182,6 @@ h2 {
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 9px #999;
-
-  /* font-size: 24px;??? */
 
 
 }

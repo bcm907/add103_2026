@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- 
 👤 PAGE: About
-📁 FILE: midterm_project/pages/about/about.html
+📁 FILE: pages/about/about.html
 
 PURPOSE:
 introduce website and provide background information
@@ -30,36 +30,30 @@ introduce website and provide background information
   </head>
 <!-- ⚙️ END PAGE SETUP -->
 
-
-<body class="page-home">
-
-
-    <!-- 🗺️ NAV HEADER: Site title and Nav -->
-    <header class="site-header">
-      <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
-      <a class="site-title" href="../../index.html">
-        <img src="../../assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
-      </a>
-
-
-      <!-- Nav links relative to folder -->
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a>Home</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="../about/about.html" aria-current="page">About</a></li>
-          <li><a href="../contact/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- 🗺️ END NAV HEADER -->
-
-
 <body class="page-about">
 
 
+  <!-- 🗺️ NAV HEADER: Site title and Nav -->
+  <header class="site-header">
+    <!-- Link returns to homepage -->
+    <a class="site-title" href="../../index.html">
+        <img src="../../assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../about/about.html" aria-current="page">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 🗺️ END NAV HEADER -->
+
+
     <!-- 📝 MAIN CONTENT: Information unique to the About page -->
-    <main>s
+    <main>
 
 
       <!-- 👤 PROFILE: Personal profile image and info -->
@@ -102,9 +96,9 @@ introduce website and provide background information
           <div class="reportcard">
             <h2>Site issues?</h2>
             <p>
-            Spot something broken on the site? Let me know below!
+            Picture not loading, broken link, spelling errors, issues with any projects?
             </p>
-            <a class="btn" href="../contact/contact.html">Report a Site Issue</a>
+            <a class="btn" href="../contact/contact.html">Let me know!</a>
           </div>
         </div>
       </section>

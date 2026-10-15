@@ -1,25 +1,13 @@
 <!doctype html>
-
 <!-- 
 📚 PAGE: Blog
-📁 FILE: pages/blog/index.html
+📁 FILE: pages/blog/blog.html
 
 PURPOSE:
   Blog: a mix of weekly coursework posts and periodic posts, separate from the
   future portfolio/projects section.
 
-  LINKED PAGES:
-  - Home: ../../index.html
-  - About: ../about/about.html
-  - Contact: ../contact/contact.html
-
-  NOTES:
-  - This page is two folders below the site root.
-  - Shared files use ../../ in their paths.
-
-
 -->
-
 <html lang="en">
   <head>
     <!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and CSS files -->
@@ -33,7 +21,7 @@ PURPOSE:
 
     <!-- Page title and favicon -->
     <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
-    <title>Blog — Welcome!</title>
+    <title>Blog — BCnDNS_Labs</title>
 
     <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
@@ -45,22 +33,23 @@ PURPOSE:
 <body class="page-blog">
 
 
-  <!-- 🗺️ SITE HEADER: Website title and main navigation -->
+  <!-- 🗺️ NAV HEADER: Site title and Nav -->
   <header class="site-header">
-    <!-- Return to homepage -->
-    <a class="site-title" href="../../index.html">Welcome!</a>
+    <!-- Link returns to homepage -->
+    <a class="site-title" href="../../index.html">
+        <img src="../../assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
+    </a>
 
-    <!-- Nav links relative to the blog folder. -->
     <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="index.html" aria-current="page">Blog</a></li>
+        <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
         <li><a href="../about/about.html">About</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <!-- 🗺️ END SITE HEADER -->
+  <!-- 🗺️ END NAV HEADER -->
 
 <!-- 📝 BEGIN MAIN -->
   <main>
@@ -160,39 +149,41 @@ PURPOSE:
     </section>
 
 
-
-    <!-- 🚩 REPORT SECTION: Placeholder until form built; report
+      <!-- 🚩 REPORT SECTION: Placeholder until form built; report
     issues with site -->
-    <section class="section section--tinted">
-      <div class="container">
-        <h2>Site issues?</h2>
-        <p>
-            Use the link below to report any issues you're experiencing with the website and/or any specific pages. (WIP; not yet built, empty link)
-        </p>
-        <a class="btn" href="../contact/contact.html">Report a Site Issue</a>
-      </div>
-    </section>
-    <!-- 🚩 END REPORT SECTION -->
+      <section class="section">
+        <div class="container">
+          <div class="reportcard">
+            <h2>Site issues?</h2>
+            <p>
+            Picture not loading, broken link, spelling errors, issues with any projects?
+            </p>
+            <a class="btn" href="../contact/contact.html">Let me know!</a>
+          </div>
+        </div>
+      </section>
+      <!-- 🚩 END REPORT SECTION -->
 
 
-  </main>
-  <!-- 📝 END MAIN -->
+    </main>
+    <!-- 📝 END MAIN -->
 
 
-  <!-- 🦶 FOOTER -->
-  <footer class="site-footer">
-    <p class="site-copy">© Welcome!</p>
+    <!-- 🦶 FOOTER -->
+    <footer class="site-footer">
+      <p class="site-copy">&copy; BCnDNS_Labs</p>
 
-    <nav class="site-nav" aria-label="Footer">
-      <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="index.html" aria-current="page">Blog</a></li>
-        <li><a href="../about/about.html">About</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </footer>
-  <!-- 🦶 END FOOTER -->
+      <nav class="site-nav" aria-label="Footer">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <!-- 🦶 END FOOTER -->
+
 
 </body>
 </html>

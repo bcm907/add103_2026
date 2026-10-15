@@ -1,68 +1,132 @@
 <!doctype html>
+<!-- 
+👤 PAGE: contact
+📁 FILE: pages/contact/contact.html
+
+PURPOSE:
+Contact page, user can send me a message using the included form
+
+-->
 <html lang="en">
   <head>
+r
+
+<!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Welcome!</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&display=swap" rel="stylesheet">
+
+    <!-- Page Title and Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
+    <title>Contact - BCnDNS Labs</title>
+
+    <!-- Shared styles first, page-specific styles second -->
     <link rel="stylesheet" href="../../styles/theme.css">
     <link rel="stylesheet" href="../../styles/pages/contact.css">
   </head>
-  <body class="page-contact">
+<!-- ⚙️ END PAGE SETUP -->
 
-    <header class="site-header">
-      <a class="site-title" href="index.html">Welcome!</a>
-      <nav class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="../about/about.html">About</a></li>
-          <li><a href="../contact/contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<body class="page-contact">
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <h1>Contact</h1>
+<!-- 🗺️ NAV HEADER: Site title and Nav -->
+  <header class="site-header">
+      <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
+    <a class="site-title" href="../../index.html">
+      <img src="../../assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html" aria-current="page">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 🗺️ END NAV HEADER -->
+
+
+
+
+  <!-- 📝 MAIN CONTENT: Information unique to the Contact page -->
+  <main>
+
+
+
+    <section class="section">
+
+
+
+      <div class="container">
+
+
+        <h1>Contact</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <form class="form" action="#" method="post">
-            <p class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text">
-            </p>
-            <p class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email">
-            </p>
-            <p class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5"></textarea>
-            </p>
-            <p><button class="btn" type="submit">Send</button></p>
-          </form>
-        </div>
-      </section>
-      <section class="section section--tinted">
-        <div class="container">
-          <h2>Ready to talk?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="btn" href="#">Contact me</a>
-        </div>
-      </section>
-    </main>
 
-    <footer class="site-footer">
-      <p class="site-copy">© Welcome!</p>
-      <nav class="site-nav" aria-label="Footer">
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          <li><a href="../about/about.html">About</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </footer>
+
+        <form class="form" action="#" method="post">
+
+          <p class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text">
+          </p>
+
+          <p class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+          </p>
+
+          <p class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </p>
+
+          <p><button class="btn" type="submit">Send</button></p>
+
+        </form>
+      </div>
+
+    </section>
+
+
+    <!-- 🚩 REPORT SECTION: Placeholder until form built; report
+    issues with site -->
+    <section class="section">
+      <div class="container">
+        <div class="reportcard">
+          <h2>Site issues?</h2>
+            <p>Picture not loading, broken link, spelling errors, issues with any projects?</p>
+            <a class="btn" href="../contact/contact.html">Let me know!</a>
+        </div>
+      </div>
+    </section>
+    <!-- 🚩 END REPORT SECTION -->
+
+
+
+  </main>
+  <!-- 📝 END MAIN -->
+
+  <!-- 🦶 FOOTER -->
+  <footer class="site-footer">
+    <p class="site-copy">© BCnDNS_Labs</p>
+
+    <nav class="site-nav" aria-label="Footer">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../blog/index.html">Blog</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html" aria-current>Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <!-- 🦶 END FOOTER -->
 
   </body>
 </html>
