@@ -1,11 +1,15 @@
 /*
 ----------
-Path: midterm_project/styles/theme.css
+Path: styles/theme.css
+
+Shared styles used by EVERY page.
+Specific page style pages are 
+found in: styles/pages/ 
 
 
 ***VARIABLES USED***
 bg = Background; behind everything
-surface = Cards and shaded strips
+surface = Cards, header, footer and shaded strips
 text = Headings and Paragraphs
 muted = Captions, Footer
 border = Borders and Rules
