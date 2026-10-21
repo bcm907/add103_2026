@@ -19,9 +19,9 @@ NOTES:
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  align-items: center;
-  gap: 40px;
-  padding: 30px 0 20px;
+  align-items: stretch;
+  gap: 24px;
+  padding: 20px 0 10px;
 
 }
 
@@ -31,8 +31,20 @@ NOTES:
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
+  padding: 24px;
+  background: var(--surface);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--shadow);
 
 }
+
+
+.hero-text .bubble h1 {
+  font-size: 36px;
+
+}
+
 
 .hero-intro {
   max-width: 520px;
@@ -53,7 +65,7 @@ NOTES:
 
 @media (min-width: 1000px) {
   .hero {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 
   }
 
@@ -61,12 +73,18 @@ NOTES:
 
 
 
-/* FEATURED */
-/* big card and 3 recent posts */
-.featured {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
+/* BIG CARD + 3 RECENT POSTS */
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+
+}
+
+
+.hero-side .card--project .window img {
+  aspect-ratio: 4/3;
 
 }
 
@@ -74,15 +92,35 @@ NOTES:
 .featured-posts {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
+  gap: 16px;
 
 }
 
 
-@media (min-width: 1000px) {
-  .featured {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.featured-posts .card--post {
+  grid-template-columns: minmax(0, 1fr);
 
+}
+
+
+.featured-posts .card--post h3 {
+  font-size: 22px;
+
+}
+
+
+@media (min-width: 700px) {
+  .featured-posts {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+
+  }
+  
+  .card--project {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: start;
+    gap: 20px;
   }
 
 }
+
