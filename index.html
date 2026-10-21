@@ -5,7 +5,6 @@
 
 PURPOSE: 
 main landing page
-
 -->
 <html lang="en">
   <head>
@@ -35,9 +34,9 @@ main landing page
 
   <!-- 🗺️ NAV HEADER: Site title and Nav -->
   <header class="site-header">
-      <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
+    <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
     <a class="site-title" href="index.html">
-      <img src="assets/images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
+      <img src="assets/general_images/BCnDNS_Logo1.svg" alt="BCnDNS Labs logo">
     </a>
 
     <nav class="site-nav" aria-label="Main">
@@ -45,6 +44,7 @@ main landing page
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="pages/blog/blog.html">Blog</a></li>
         <li><a href="pages/about/about.html">About</a></li>
+  <!--  <li><a href="pages/projects/projects.html">Projects</a></li> -->
         <li><a href="pages/contact/contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -55,96 +55,213 @@ main landing page
     <!-- 📝 MAIN: information unique to homepage -->
     <main>
 
-      <!-- ⭐️ HERO: main intro visitors see first -->
+
+      <!-- HERO: main intro -->
       <section class="section">
         <div class="container">
-          <h1>"It worked yesterday!"</h1>
-          <p>
-            Thats a phrase we seem to say to ourselves more often than we'd like! Welcome to BCnDNS_Labs, where I showcase projects I've built or contributed too, issues I've ran into and how to solve them, tips and tricks, among other things! 
-          </p> <!-- ❓❓❓ ADD NEWSLETTER INFO to paragraph ❓❓❓ -->
+          <div class="hero">
+
+            <div class="hero-text">
+              <p class="label">Projects ~ Fixes ~ Notes</p>
+
+              <!-- SPEECH BUBBLE -->
+              <div class="bubble">
+                <h1>"It worked Yesterday!"</h1>
+              </div>
+
+
+              <!-- !!! REPLACE WITH OWN INFO !!! -->
+              <div class="identity">
+                <div class="avatar"><svg class="icon" width="60" height="50" viewBox="0 0 12 10" fill="currentColor" aria-hidden="true"><path d="M4 0h4v1h-4zM3 1h6v1h-6zM3 2h6v1h-6zM3 3h6v1h-6zM4 4h4v1h-4zM5 5h2v1h-2zM2 6h8v1h-8zM1 7h10v1h-10zM0 8h12v1h-12zM0 9h12v1h-12z"/></svg></div>
+                <div>
+                  <span class="identity-name">NAME</span>
+                  <span class="identity-role">SUMMARY · LOCATION?</span>
+                </div>
+              </div>
+
+
+              <p class="hero-intro">
+                Projects I've built, issues I've run into and how I solved them, plus tips and tricks along the way.
+              </p>
+
+
+              <!-- !!! REPLACE WITH OWN INFO !!! -->
+              <ul class="iconlinks">
+                <li><a class="iconlink" href="https://github.com/your-username"><svg class="icon" width="34" height="18" viewBox="0 0 17 9" fill="currentColor" aria-hidden="true"><path d="M4 0h1v1h-1zM10 0h1v1h-1zM12 0h1v1h-1zM3 1h1v1h-1zM9 1h1v1h-1zM13 1h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM14 2h1v1h-1zM1 3h1v1h-1zM8 3h1v1h-1zM15 3h1v1h-1zM0 4h1v1h-1zM8 4h1v1h-1zM16 4h1v1h-1zM1 5h1v1h-1zM7 5h1v1h-1zM15 5h1v1h-1zM2 6h1v1h-1zM7 6h1v1h-1zM14 6h1v1h-1zM3 7h1v1h-1zM6 7h1v1h-1zM13 7h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM12 8h1v1h-1z"/></svg>GitHub</a></li>
+                <li><a class="iconlink" href="mailto:you@example.com"><svg class="icon" width="24" height="18" viewBox="0 0 12 9" fill="currentColor" aria-hidden="true"><path d="M0 0h12v1h-12zM0 1h2v1h-2zM10 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM8 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM0 5h1v1h-1zM5 5h2v1h-2zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12z"/></svg>Email</a></li>
+                <li><a class="iconlink" href="#"><svg class="icon" width="18" height="24" viewBox="0 0 9 12" fill="currentColor" aria-hidden="true"><path d="M0 0h7v1h-7zM0 1h1v1h-1zM6 1h2v1h-2zM0 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM0 3h1v1h-1zM6 3h3v1h-3zM0 4h1v1h-1zM8 4h1v1h-1zM0 5h1v1h-1zM2 5h5v1h-5zM8 5h1v1h-1zM0 6h1v1h-1zM8 6h1v1h-1zM0 7h1v1h-1zM2 7h5v1h-5zM8 7h1v1h-1zM0 8h1v1h-1zM8 8h1v1h-1zM0 9h1v1h-1zM2 9h4v1h-4zM8 9h1v1h-1zM0 10h1v1h-1zM8 10h1v1h-1zM0 11h9v1h-9z"/></svg>Resume</a></li>
+              </ul>
+
+
+              <div class="hero-buttons">
+                <a class="btn btn--primary" href="pages/blog/blog.html">See latest posts</a>
+                <a class="btn" href="pages/projects/projects.html">See projects</a>
+              </div>
+
+              <p class="status">Current build???</p>
+            </div>
+
+
+            <!-- PICTURE FRAME -->
+            <div class="frame">
+              <img src="assets/images/room_desk.png" alt="Pixel art isometric room with server racks on the left and a lamp-lit desk with a CRT monitor on the right">
+            </div>
+          </div>
         </div>
       </section>
-      <!-- ⭐️ END HERO -->
+      <!-- END HERO -->
 
-      
-      <!-- 💼 FEATURE CARDS: project highlights -->
+
+      <!-- FEATURED: current project + 3 recent posts
+      update recent posts when you publish something new
+      -->
       <section class="section">
         <div class="container">
-          <h2>
-            Featured
-          </h2>
 
-          <!-- CSS grid; becomes 3 columns on wider screens -->
-          <div class="row row--3">
+          <div class="section-head">
+            <div>
+              <span class="label">01 / Featured</span>
+              <h2>Current project &amp; latest posts</h2>
+            </div>
+            <a href="pages/blog/blog.html">Browse all posts =></a>
+          </div>
 
+          <div class="featured">
 
-            <!-- CARD 1 -->
-            <article class="card">
-              <img src="assets/images/week7feat_card.png" alt="pixel art fjord with mountains, a cabin, and a camera on a tripod.">
-              <h3>Responsive Travel Log</h3>
-              <p>An example travel log that resizes automatically for different screen sizes.</p>
-              <ul class="list">
-                <li>Responsive Images</li>
-                <li>Media Queries</li>
-                <li>Week 7</li>
+            <!-- BIG CARD -->
+            <article class="card card--project">
+              <div class="window">
+                <div class="window-bar">
+                  <span class="window-title">current project</span>
+                  <span class="window-buttons" aria-hidden="true"></span><span></span><span></span>
+                </div>
+                <img src="#" alt="#">
+              </div>
+              <ul class="chips">
+                <li class="chip chip--amber">In progress</li>
+                <li class="chip">Language</li>
+                <li class="chip">framework/api</li>
               </ul>
+              <h3>Project title</h3>
+              <p>Progress roadmap???</p>
+              <ol class="roadmap">
+                <li><Strong>Plan:</Strong>Define what project is</li>
+                <li><Strong>Prototype:</Strong>MVP</li>
+                <li><Strong>Build:</Strong>Features</li>
+                <li><Strong>Release:</Strong>Test and publish</li>
+              </ol>
+              <div class="card-links">
+                <a href="#">Project Link</a>
+                <a href="#">SOURCE</a>
+              </div>
             </article>
-
-
-            <!-- CARD 2 -->
-            <article class="card">
-              <img src="assets/images/week6feat_card.png" alt="pixel art photo wall with framed picture connected by vines.">
-              <h3>Week 9</h3>
-                
-                  <p>
-                  9A: Bootstrap Grid Album
-                  </p>
-                  <ul>
-                    <a href ="pages/blog/week_09/grid/index.html">Click Here!</a>
-                  </ul>
-                  <p>
-                    9B: Bootstrap Components
-                  </p>
-                  <ul>
-                    <a href="pages/blog/week_09/components/index.html">Click Here!</a>
-                  </ul>
-            </article>
+          <!-- END BIG CARD -->
           
 
-            <!-- CARD 3 -->
-            <article class="card">
-              <img src="assets/images/obsidianplugfeat_card.png" alt="desktop computer with teal connector lines and dots.">
-              <h3>Obsidian Plugin Project</h3>
-              <p>
-                Progress roadmap for the plugin I'm building for Obsidian.
-              </p>
-              <ul class="list">
-                <li><strong>Plan:</strong> Define what the plugin is and what it does.</li>
-                <li><strong>Prototype:</strong> Get a basic Minimum Viable Product running.</li>
-                <li><strong>Build:</strong> Core Features.</li>
-                <li><strong>Release:</strong> Testing and publishing. </li>
+          <!-- 3 NEWEST BLOG POSTS -->
+          <div class="featured-posts">
+          <article class="card card--post">
+            <div class="window thumb">
+              <div class="window-bar">
+                <span class="window-title">preview.png</span>
+                <span class="window-buttons" aria-hidden="true"></span><span></span><span></span>
+              </div>
+              <img src="assets/images/thumbs/thumb-bites.png" alt="Pixel art loaded fries with jalapeños">
+            </div>
+            <div class="card-body">
+              <ul class="chips">
+                <li class="chip">Blog</li>
+                <li class="chip">Week 9</li>
+                <li class="chip">Bootstrap</li>
               </ul>
-            </article>
-          </div>
+              <h3>Bootstrap Grid and Components</h3>
+              <p>A grid album and a food truck menu, built with no custom CSS.</p>
+              <div class="card-links">
+                <a href="pages/blog/blog.html#week-09">Read post →</a>
+                <a href="pages/blog/week_09/components/index.html">Live ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--post">
+            <div class="window thumb">
+              <div class="window-bar">
+                <span class="window-title">preview.png</span>
+                <span class="window-buttons" aria-hidden="true"></span><span></span><span></span>
+              </div>
+              <img src="assets/images/thumbs/thumb-travel.png" alt="Screenshot of the Travel Log page with an aurora photo and a photo wall">
+            </div>
+            <div class="card-body">
+              <ul class="chips">
+                <li class="chip">Blog</li>
+                <li class="chip">Week 7</li>
+                <li class="chip">Media Queries</li>
+              </ul>
+              <h3>Responsive Travel Log</h3>
+              <p>A travel log that resizes for different screen sizes.</p>
+              <div class="card-links">
+                <a href="pages/blog/blog.html#week-07">Read post →</a>
+                <a href="pages/blog/week_07/7b_responsephoto/index.html">Live ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--post">
+            <div class="window thumb">
+              <div class="window-bar">
+                <span class="window-title">preview.png</span>
+                <span class="window-buttons" aria-hidden="true"><span></span><span></span></span>
+              </div>
+              <img src="assets/images/thumbs/thumb-profile.png" alt="Screenshot of the Profile Card page with a pixel-art portrait">
+            </div>
+            <div class="card-body">
+              <ul class="chips">
+                <li class="chip">Blog</li>
+                <li class="chip">Week 7</li>
+                <li class="chip">HTML · CSS</li>
+              </ul>
+              <h3>Profile Card</h3>
+              <p>A profile card built with a pixel-art avatar.</p>
+              <div class="card-links">
+                <a href="pages/blog/blog.html#week-07">Read post →</a>
+                <a href="pages/blog/week_07/7a_profilecard/index.html">Live ↗</a>
+              </div>
+            </div>
+
+          </article>
+          
         </div>
+        </div>
+
+        </div>
+
       </section>
-      <!-- 💼 END FEATURE CARDS -->
+      <!-- END FEATURED -->
 
 
-      <!-- 🚩 REPORT SECTION: Placeholder until form built; report
-    issues with site -->
+      <!-- 📬 CONTACT: Say hi, or report a problem with the site -->
       <section class="section">
         <div class="container">
-          <div class="reportcard">
-            <h2>Site issues?</h2>
-            <p>
-              Picture not loading, broken link, spelling errors, issues with any projects?
-            </p>
-            <a class="btn" href="pages/contact/contact.html">Report a Site Issue</a>
+          <p class="label">02 / Contact</p>
+          <div class="contact-box">
+            <div class="contact-box-text">
+              <svg class="icon" width="96" height="72" viewBox="0 0 12 9" fill="currentColor" aria-hidden="true"><path d="M0 0h12v1h-12zM0 1h2v1h-2zM10 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM8 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM0 5h1v1h-1zM5 5h2v1h-2zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12z"/></svg>
+              <div>
+                <h2>Get in touch</h2>
+                <p>Questions, project ideas, or just saying hi? Or did something on the site break: a picture, a link, a typo?</p>
+              </div>
+            </div>
+
+            <div class="contact-buttons">
+              <!-- TODO: replace with your real email address -->
+              <a class="btn btn--primary" href="mailto:you@example.com"><svg class="icon" width="24" height="18" viewBox="0 0 12 9" fill="currentColor" aria-hidden="true"><path d="M0 0h12v1h-12zM0 1h2v1h-2zM10 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM8 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM0 5h1v1h-1zM5 5h2v1h-2zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12z"/></svg>Say hi</a>
+              <!-- TODO: replace your-username with your GitHub name; opens a new GitHub issue -->
+              <a class="btn btn--outline" href="https://github.com/your-username/add103_2026/issues/new" target="_blank" rel="noopener"><svg class="icon" width="6" height="24" viewBox="0 0 2 8" fill="currentColor" aria-hidden="true"><path d="M0 0h2v1h-2zM0 1h2v1h-2zM0 2h2v1h-2zM0 3h2v1h-2zM0 4h2v1h-2zM0 6h2v1h-2zM0 7h2v1h-2z"/></svg>Report a site issue</a>
+            </div>
           </div>
         </div>
       </section>
-      <!-- 🚩 END REPORT SECTION -->
+      <!-- 📬 END CONTACT -->
 
 
     </main>
@@ -153,11 +270,11 @@ main landing page
 
     <!-- 🦶 FOOTER -->
     <footer class="site-footer">
-      <p class="site-copy">© BCnDNS_Labs</p>
+      <p class="site-copy">&copy; BCnDNS_Labs<!-- <a href="https://github.com/USERNAMEHERE">github</a> . <a href="mailto:bcndigital@pm.me>Email</a>" --></p>
 
       <nav class="site-nav" aria-label="Footer">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="pages/blog/blog.html">Blog</a></li>
           <li><a href="pages/about/about.html">About</a></li>
           <li><a href="pages/contact/contact.html">Contact</a></li>

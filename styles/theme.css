@@ -15,15 +15,38 @@ muted = Captions, Footer
 border = Borders and Rules
 accent = Links and Buttons
 accent-text = Text printed on a button
+teal = ridge borders and main theme
+red = hover color and secondary theme color
+shadow = shadow under cards
 
 @media (prefers-color-scheme: dark) = Dark Mode
 
-NOTES:
+Responsive reference: 
+phone = under 700px; 1 col
+tablet = 700px and up; 2 col
+desktop = 1000px and up; 3 col
+
+Guide
+1. Variables
+2. Basic page settings
+3. headings, links, images
+4. Layout
+5. Header and Footer
+6. Buttons
+7. Small parts (labels, chips, icons, status)
+8. Window frames and picture frames
+9. Cards
+10. Speech bubble and identity
+11. Contact
+12. Accessibility
+13. Back link and assignment frame 
+
 
 */
 
-/* DEFAULT */
+/* --- 1. VARIABLES --- */
 
+/* DEFAULT (light) */
 :root {
   --bg: #ffffff;
   --surface: #f4f5f7;
@@ -34,12 +57,16 @@ NOTES:
   --accent-text: #ffffff;
   --teal: #0b7f88;
   --red: #c4271d;
+  --amber: #f2a33a;
+  --amber-text: #8a4b00;
+  --on-amber: #1a1208;
+  --shadow: #0000002e;
+
   
 }
 
 
-/* DARK MODE */
-
+/* DARK MODE */ 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #1c1e22;
@@ -51,15 +78,20 @@ NOTES:
     --accent-text: #1c1e22;
     --teal: #19d3dc;
     --red: #e8453c;
+    --amber: #f2a33a;
+    --amber-text: #f2a33a;
+    --on-amber: #1a1208;
+    --shadow: #0000008c;
   
   }
 
 }
 
-/* --- BASIC PAGE SETTINGS --- */
+/* --- 2. BASIC PAGE SETTINGS --- */
 * { 
   box-sizing: border-box; 
 }
+
 
 body {
   margin: 0;
@@ -71,58 +103,764 @@ body {
 }
 
 
-/* --- HEADER AND FOOTER --- */
+/* --- 3. HEADINGS, LINKS, IMAGES --- */
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+  line-height: 1.2;
+  font-family: "Jersey 10", "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+
+}
+
+
+h1 { 
+  font-size: 52px; 
+
+}
+
+h2 { 
+  font-size: 38px; 
+  color: var(--teal);
+}
+
+h3 { 
+  font-size: 30px;
+}
+
+
+a {
+  color: var(--accent);
+
+}
+
+
+a:hover {
+  color: var(--red);
+
+}
+
+
+img {
+  max-width: 100%; 
+  display: block;
+
+}
+
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 44px;
+
+  }
+
+}
+
+
+
+/* --- 4. LAYOUT --- */
+.container {
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+
+.section {
+  padding: 30px 0;
+
+}
+
+/* 
+Default = 1 col
+Media Queries below change row 2 and row 3 on wider screens
+*/
+
+.row {
+  display: grid; 
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+
+}
+
+
+@media (min-width: 700px) {
+  .row--2,
+  .row--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* 
+Heading section at the top of a section
+label + title on left, link on right
+*/
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline; 
+  justify-content: space-between;
+  gap: 8px 24px; 
+  margin-bottom: 24px;
+
+}
+
+
+.section-head > div {
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: baseline; 
+  gap: 6px 16px;
+
+}
+
+
+.section-head h1,
+.section-head h2 {
+  margin: 0;
+
+}
+
+.section-head a {
+  font-weight: bold; 
+  text-decoration: none;
+
+}
+
+
+
+/* --- 5. HEADER AND FOOTER --- */
 .site-header, 
 .site-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px 24px;
   align-items: center;
   justify-content: space-between;
   width: 95%;
-  max-width: 1060px;
-  margin: 10px auto;
-  padding: 10px;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 12px 14px;
+  border: 4px ridge var(--teal);
+  border-radius: 8px;
+  background-color: var(--surface);
+
 }
 
+
 .site-header { 
-  border: 4px ridge var(--teal); 
-  border-radius: 10px;
-  background: var(--surface);
-  background-image: url("../assets/images/aurorabanner.png");
+  background-image: url("../assets/general_images/aurorabanner.png");
   background-size: cover;
   background-position: center top;
 
-
-
 }
 
-.site-footer {
-  border: 4px ridge var(--teal); 
-  border-radius: 10px;
-  background: var(--surface);
-
-
-}
 
 .site-title {
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--text);
-  text-decoration: none;
+  display: block; 
+  padding: 4px 12px;
   background: var(--surface);
   border: 3px ridge var(--teal);
-  border-radius: 10px;
-  padding: 6px 10px;
-
+  border-radius: 8px;
 
 }
 
+
 .site-title img {
-  height: 100px; 
+  height: 64px; 
+  width: auto;
   margin: 0;
 
 }
+
+
+.site-copy, 
+.site-find {
+  margin: 0; 
+  color: var(--muted);
+  font-size: 15px;
+
+}
+
+
+.site-nav a { 
+  display: block; 
+  padding: 6px 14px; 
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  border: 4px ridge var(--teal);
+  border-radius: 10px;
+
+}
+
+
+.site-nav a:hover {
+  border-color: var(--red);
+  color: var(--red);
+
+}
+
+
+.site-footer . site-nav a {
+  padding: 4px 12px; 
+  background: var(--bg);
+  font-size: 14px;
+
+}
+
+
+.site-nav a[aria-current="page"] {
+  border-color: var(--teal);
+  color: var(--accent-text);
+  font-weight: bold;
+
+}
+
+
+@media (max-width: 699px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  
+}
+
+
+/* --- 6. BUTTONS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 3px ridge var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold; 
+
+}
+
+
+.btn:hover {
+  border: var(--red);
+  color: var(--red);
+
+}
+
+
+.btn--primary {
+  background: var(--amber);
+  color: var(--on-amber);
+  border-color: var(--amber);
+
+}
+
+
+.btn--primary:hover {
+  color: var(--on-amber);
+
+}
+
+
+.btn--outline {
+  background: var(--bg);
+
+}
+
+
+
+
+/* --- 7. SMALL PARTS --- */
+
+/* Numbered label above a section title: "01 / Featured" */
+.label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+
+/* Chips: tiny tags like "HTML" or "In progress" */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.chip {
+  padding: 1px 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+}
+
+
+.chip--amber {
+  color: var(--amber-text);
+  border-color: var(--amber-text);
+}
+
+
+/* Pixel icons are inline SVGs that take the text color */
+.icon {
+  display: block;
+  flex: none;
+  shape-rendering: crispEdges;
+}
+
+
+/* Row of icon + text links (GitHub, Email, Resume) */
+.iconlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.iconlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px ridge var(--teal);
+  border-radius: 6px;
+}
+
+
+.iconlink .icon {
+  color: var(--accent);
+}
+
+
+.iconlink:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+
+/* Small square + text: "Currently building..." */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+
+.status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--amber);
+}
+
+
+
+/* --- 8. WINDOW FRAMES AND PICTURE FRAMES --- */
+
+/* Window: a box with a title bar and two little buttons */
+.window {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+}
+
+
+.window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 10px;
+  background: var(--border);
+  border-bottom: 3px ridge var(--teal);
+}
+
+
+.window-title {
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.window-buttons {
+  display: flex;
+  flex: none;
+  gap: 5px;
+}
+
+
+.window-buttons span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--muted);
+}
+
+.window-buttons span:last-child {
+  background: var(--muted);
+}
+
+.window img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Thumbnail window: always 4:3 so cards line up */
+.thumb img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+/* Picture frame: a plain framed picture (no title bar) */
+.frame {
+  min-width: 0;
+  padding: 12px;
+  background: var(--surface);
+  border: 4px ridge var(--teal);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+
+.frame img {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+
+/* --- 9. CARDS --- */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.card h3,
+.card h2 {
+  margin: 0;
+}
+
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Project card: big window picture on top (16:9) */
+.card--project .window img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+.card--project h3 {
+  font-size: 34px;
+}
+
+/* Post card: small thumbnail on the left, text on the right */
+.card--post {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px 18px;
+  padding: 16px;
+}
+
+
+.card--post p {
+  font-size: 15px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+  min-width: 0;
+}
+
+
+/* Numbered roadmap list inside a project card */
+.roadmap {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.roadmap li {
+  margin-bottom: 6px;
+}
+
+.roadmap strong {
+  color: var(--text);
+}
+
+
+
+/* "Read post →" and "Live ↗" links at the bottom of a card */
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.card-links a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .card--post {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
+/* --- 10. SPEECH BUBBLE AND IDENTITY --- */
+.bubble {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 36px;
+  padding: 18px 26px 20px;
+  background: var(--surface);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.bubble h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1;
+}
+
+
+/* pixel bubble "tail"  */
+.bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 36px;
+  width: 30px;
+  height: 30px;
+  margin-top: -3px;
+  background: var(--teal);
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 80% 20%, 80% 40%, 60% 40%, 60% 60%, 40% 60%, 40% 80%, 20% 80%, 20% 100%, 0 100%);
+}
+
+@media (min-width: 700px) {
+  .bubble h1 {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .bubble h1 {
+    font-size: 76px;
+  }
+}
+
+
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.avatar {
+  display: flex;
+  padding: 6px;
+  background: var(--bg);
+  color: var(--accent);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+}
+
+.identity-name {
+  display: block;
+  font-family: "Jersey 10", "Atkinson Hyperlegible", sans-serif;
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.identity-role {
+  display: block;
+  color: var(--muted);
+}
+
+
+
+/* --- 11. CONTACT BOX --- */
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 32px;
+  padding: 22px 26px;
+  background: var(--surface);
+  border: 6px ridge var(--teal);
+  border-radius: 8px;
+}
+
+.contact-box-text {
+  display: flex;
+  flex: 1 1 320px;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  color: var(--accent);
+}
+
+.contact-box-text .icon {
+  margin-top: 10px;
+}
+
+.contact-box h2 {
+  margin: 0 0 6px;
+  font-size: 38px;
+  color: var(--text);
+}
+
+.contact-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+.contact-buttons .icon {
+  color: var(--accent);
+}
+
+
+.contact-buttons .btn--primary .icon {
+  color: var(--on-amber);
+}
+
+
+/* On small phones shrink contact box; too big */
+@media (max-width: 520px) {
+  .contact-box-text > .icon {
+    display: none;
+  }
+}
+
+
+/* --- 12. ACCESSIBILITY --- */
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+
+/* --- 13. BACK LINK AND ASSIGNMENT FRAME --- */
+/* "← Back to Blog" link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.assignment-frame {
+  padding: 20px;
+  background: var(--bg);
+  border: 3px ridge var(--teal);
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .site-copy { 
   margin: 0; 
@@ -138,36 +876,13 @@ body {
   padding: 0;
 }
 
-.site-nav a { 
-  background: var(--surface);
-  text-decoration: none; 
-  padding: 6px 12px;
-  border: 3px ridge var(--border);
-  border-radius: 10px;
-  border-color: var(--teal);
 
-}
 
-.site-nav a:hover {
-  border-color: var(--red);
-}
 
 
 
 /* --- HEADERS --- */
-h1 { 
-  font-size: 52px; 
 
-}
-
-h2 { 
-  font-size: 38px; 
-  color: var(--teal);
-}
-
-h3 { 
-  font-size: 30px;
-}
 
 
 

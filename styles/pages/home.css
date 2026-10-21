@@ -11,191 +11,78 @@ NOTES:
 
 */
 
-/* --- BASIC PAGE SETTINGS --- */
-* { 
-  box-sizing: border-box; 
-}
-
-body {
-  margin: 0;
-  font-family: Atkinson Hyperlegible, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  background: var(--bg);
-  color: var(--text);
-}
 
 
-/* --- HEADERS --- */
-h1 { 
-  font-size: 52px; 
 
-}
-
-h2 { 
-  font-size: 38px; 
-}
-
-h3 { 
-  font-size: 30px;
-}
-
-h1, h2, h3 { 
-  margin: 0 0 12px; 
-  line-height: 1.25; 
-  font-family: "Jersey 10", "Atkinson Hyperlegible", sans-serif;
-  font-weight: 400;
-}
-
-
-/* --- LINKS AND IMAGES --- */
-a { 
-  color: var(--accent); 
-}
-
-img { 
-  max-width: 100%;
-  display: block; 
-}
-
-
-/* --- MAIN LAYOUT --- */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-}
-
-.section { 
-  padding: 30px 0; 
-
-}
-
-
-/* --- GRID ROWS --- */
-/* 
-  Default is one column.
-  Media queries at bottom changes row--2 and row--3
-  to multiple columns on wider screens.
-*/
-.row {
+/* HERO */
+/* default 1 col */
+.hero {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-
-/* --- FEATURE CARDS --- */
-.card {
-  height: 100%;
-  padding: 20px;
-  background: var(--surface);
-  border: 4px ridge var(--teal);
-  border-radius: 8px;
-}
-
-
-.card img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 3px ridge var(--teal);
-  border-radius: 6px;
-
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding: 30px 0 20px;
 
 }
 
 
-.reportcard {
-  height: 100%;
-  padding: 20px;
-  background: var(--surface);
-  border: 6px ridge var(--teal);
-  border-radius: 8px;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
 
 }
 
-
-
-
-
-
-
-
-
-/* --- PLACEHOLDER IMAGES AREA --- */
-.ph {
-  height: 240px;
-  padding-top: 105px;
-  background: var(--surface);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
+.hero-intro {
+  max-width: 520px;
+  margin: 0;
+  font-size: 18px;
   color: var(--muted);
-  font-size: 13px;
-  text-align: center;
-}
 
-.ph--square { 
-  height: 260px; 
 }
 
 
-/* --- LISTS --- */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 
-.list { 
-  padding-left: 20px; 
-  margin: 0 0 20px; 
-}
-
-.list li { 
-  margin-bottom: 6px; 
 }
 
 
-/* --- FORM STYLES FOR FUTURE PAGES --- */
-.form { 
-  max-width: 480px; 
-}
+@media (min-width: 1000px) {
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-.field { 
-  margin: 0 0 20px; 
-}
-
-.field label { 
-  display: block; 
-  margin-bottom: 6px; 
-}
-
-.field input, 
-.field textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px ridge var(--border);
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text);
-  font: inherit;
-}
-
-
-
-/* --- ACCESSIBILITY --- */
-.page-home a:focus-visible,
-.page-home .btn:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
-
-/* RESPONSIVE LAYOUT */
-@media (min-width: 700px) {
-  .row--2 { 
-    grid-template-columns: repeat(2, 1fr); 
   }
 
-  .row--3 { 
-    grid-template-columns: repeat(3, 1fr); 
+}
+
+
+
+/* FEATURED */
+/* big card and 3 recent posts */
+.featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+
+}
+
+
+.featured-posts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+
+}
+
+
+@media (min-width: 1000px) {
+  .featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
   }
+
 }
