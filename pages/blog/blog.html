@@ -7,6 +7,18 @@ PURPOSE:
   Blog: a mix of weekly coursework posts and periodic posts, separate from the
   future portfolio/projects section.
 
+
+*****
+
+AI Disclaimer
+
+Vast majority of this site and pages was built by myself and no
+course work pages were generated using AI. 
+
+Things AI was used for; Redundant tasks, catching CSS/HTML errors, making fine tuned/minor adjustments to styles and elements on pages (If I wanted a button moved over a few pixels and just couldn't figure out how), checking links, and periodically reviewing my work upon request.
+
+*****
+
 -->
 <html lang="en">
   <head>
@@ -17,7 +29,8 @@ PURPOSE:
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&display=swap" rel="stylesheet">
+
 
     <!-- Page title and favicon -->
     <link rel="icon" type="image/x-icon" href="../../assets/favicons/nali-favicon.ico">
@@ -54,128 +67,179 @@ PURPOSE:
 <!-- 📝 BEGIN MAIN -->
   <main>
 
-
-    <!-- 📚 INTRO: Overview of the blog page -->
-    <section class="section blog-intro">
+    <section class="section">
       <div class="container">
-        <h1>Blog/Course Portal</h1>
-
-        <p>
-          This page contains weekly coursework posts alongside periodic posts, tips, and notes.
-        </p>
-      </div>
-    </section>
-    <!-- 📚 END INTRO -->
-
-    <!-- WEEK 9 PAGES -->
-    <section class="section section--tinted">
-      <div class="container">
-        <div class="row row--2">
-          <article class="card">
-            <h2>Week 9 Pages</h2>
-            <p>
-              Pages showcasing bootstrap grid layouts and components with no custom CSS.
-            </p>
+        <p class="label">01 / Portal</p>
+        <div class="page-layout">
+          
+          <!-- SIDEBAR -->
+          <aside class="card sidebar">
+            <h1>Blog / Course Portal</h1>
+            <p>coursework and occasional tip or notes</p>
+            <h3>Jump to...</h3>
             <ul>
-              <li><a href="week_09/grid/index.html">9A: Bootstrap Grid Album</a></li>
-              <li><a href="week_09/components/index.html">9B: Bootstrap Components</a></li>
+              <li><a href="#week-09">Week 9</a></li>
+              <li><a href="#week-07">Week 7</a></li>
+              <li><a href="#week-06">Week 6</a></li>
+              <li><a href="#earlier">Earlier weeks</a></li>
             </ul>
-          </article>
+          </aside>
 
-          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">
-              PLACEHOLDER<br>
-              1600x900
+          <!-- MAIN - COURSE WORK AND POSTS -->
+          <div class="page-main">
+
+            <!-- LATEST 3 POSTS -->
+            <div class="posts-latest">
+
+              <!-- LATEST POST 1 -->
+              <article class="card card--post" id="week-09">
+                <div class="window thumb">
+                  <div class="window-bar">
+                    <span class="window-title">preview.png</span>
+                    <span class="window-buttons" aria-hidden="true"><span></span><span></span></span>
+                  </div>
+                  <img src="../../assets/blog_images/week_09/loadedfries.png" alt="loaded fries" class="card-image">
+                </div>
+                <div class="card-body">
+                  <ul class="chips"><li class="chip">Week 9</li><li class="chip">Bootstrap</li></ul>
+                  <h3>Bootstrap Grid and Components</h3>
+                  <p>Grid layouts and components built with no custom CSS.</p>
+                  <div class="card-links">
+                    <a href="week_09/grid/index.html">9A: Grid album</a>
+                    <a href="week_09/components/index.html">9B: Components</a>
+                  </div>
+                </div>
+              </article>
+              <!-- END LATEST POST 1 -->
+
+              <!-- LATEST POST 2 -->
+              <article class="card card--post" id="week-07">
+                <div class="window thumb">
+                  <div class="window-bar">
+                    <span class="window-title">preview.png</span>
+                    <span class="window-buttons" aria-hidden="true"><span></span><span></span></span>
+                  </div>
+                  <img src="week_07/7b_responsephoto/images/hero.jpg" alt="loaded fries" class="card-image">
+                </div>
+                <div class="card-body">
+                  <ul class="chips"><li class="chip">Week 7</li><li class="chip">Bootstrap</li></ul>
+                  <h3>Profile card and Responsive Gallery</h3>
+                  <p>A profille card and travel log that resizes for different screen sizes.</p>
+                  <div class="card-links">
+                    <a href="week_07/7a_profilecard/index.html">7A: Profile Card</a>
+                    <a href="week_07/7b_responsephoto/index.html">7B: Responsive Gallery</a>
+                  </div>
+                </div>
+              </article>
+              <!-- END LATEST POST 2 -->
+
+              <!-- LATEST POST 3 -->
+              <article class="card card--post" id="week-06">
+                <div class="window thumb">
+                  <div class="window-bar">
+                    <span class="window-title">preview.png</span>
+                    <span class="window-buttons" aria-hidden="true"><span></span><span></span></span>
+                  </div>
+                  <img src="week_06/week_06_images/thumbnails/thumb1.jpg" alt="CHANGE alt text for thumb CHANGE" class="card-image">
+                </div>
+                <div class="card-body">
+                  <ul class="chips"><li class="chip">Week 6</li><li class="chip">CSS grid</li></ul>
+                  <h3>Grid layout and gallery</h3>
+                  <p>A travel log and photo gallery laid out with CSS grid.</p>
+                  <div class="card-links">
+                    <a href="week_06/6a_grid/index.html">6A: Grid</a>
+                    <a href="week_06/6b_gallery/gallery_v1.html">6B: Gallery</a>
+                  </div>
+                </div>
+              </article>
+              <!-- END LATEST POST 3 -->
             </div>
+
+          </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- WEEK 8 -->
-    <section class="section section--tinted">
-      <div class="container">
-        <div class="row row--2">
-          <article class="card">
-            <h2>Week 8</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </article>
+        <!-- EARLIER WEEKS: full width, under the sidebar and posts -->
+        <div class="earlier-weeks">
+          <h2 id="earlier">Earlier weeks</h2>
+          <div class="posts-archive">
+            <article class="card card--mini" id="week-05">
+              <ul class="chips"><li class="chip">Week 5</li></ul>
+              <h3>Flexbox</h3>
+              <div class="card-links">
+                <a href="week_05/5a_flexbox/index.html">Flexbox</a>
+                <a href="week_05/gallery/gallery.html">Gallery</a>
+                <a href="week_05/hero/index.html">Hero</a>
+              </div>
+            </article>
 
-          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">
-              PLACEHOLDER<br>
-              1600x900
-            </div>
-        </div>
-      </div>
-    </section>
+            <article class="card card--mini" id="week-04">
+              <ul class="chips"><li class="chip">Week 4</li></ul>
+              <h3>Layout</h3>
+              <div class="card-links">
+                <a href="week_04/layout/index.html">Hobby Page ↗</a>
+                <a href="week_04/outline/index.html">Outline ↗</a>
+              </div>
+            </article>
 
+            <article class="card card--mini" id="week-03">
+              <ul class="chips"><li class="chip">Week 3</li></ul>
+              <h3>Calendar and Portal</h3>
+              <div class="card-links">
+                <a href="week_03/calendar/index.html">Calendar ↗</a>
+                <a href="week_03/portal/index.html">Portal ↗</a>
+              </div>
+            </article>
 
-    <!-- WEEK 7 PAGES -->
-    <section class="section section--tinted">
-      <div class="container">
-        <div class="row row--2">
-          <article class="card">
-            <h2>Week 7</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <ul>
-              <li><a href="week_07/7a_profilecard/index.html">7A: Profile Card</a></li>
-              <li><a href="week_07/7b_responsephoto/index.html">7B: Responsive Gallery</a></li>
-            </ul>
-          </article>
+            <article class="card card--mini" id="week-02">
+              <ul class="chips"><li class="chip">Week 2</li></ul>
+              <h3>Review and Ugly Page</h3>
+              <div class="card-links">
+                <a href="week_02/review/index.html">Review ↗</a>
+                <a href="week_02/ugly/index.html">Ugly Page ↗</a>
+              </div>
+            </article>
 
-          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">
-              PLACEHOLDER<br>
-              1600x900
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WEEK 6 PAGES -->
-    <section class="section section--tinted">
-      <div class="container">
-        <div class="row row--2">
-          <article class="card">
-            <h2>Week 6</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </article>
-
-          <!-- Replace with: <img src="../../assets/images/your-photo.jpg" alt="Describe the photo"> -->
-            <div class="ph">
-              PLACEHOLDER<br>
-              1600x900
-            </div>
-        </div>
-      </div>
-    </section>
-
-
-      <!-- 🚩 REPORT SECTION: Placeholder until form built; report
-    issues with site -->
-      <section class="section">
-        <div class="container">
-          <div class="reportcard">
-            <h2>Site issues?</h2>
-            <p>
-            Picture not loading, broken link, spelling errors, issues with any projects?
-            </p>
-            <a class="btn" href="../contact/contact.html">Let me know!</a>
+            <article class="card card--mini" id="week-01">
+              <ul class="chips"><li class="chip">Week 1</li></ul>
+              <h3>Git</h3>
+              <div class="card-links">
+                <a href="week_01/git.html">Git ↗</a>
+              </div>
+            </article>
+  
           </div>
         </div>
-      </section>
-      <!-- 🚩 END REPORT SECTION -->
+
+      </div>
+    </section>
+
+    <!-- 📬 CONTACT: Say hi, or report a problem with the site -->
+    <section class="section">
+      <div class="container">
+        <p class="label">02 / Contact</p>
+        <div class="contact-box">
+          <div class="contact-box-text">
+            <svg class="icon" width="96" height="72" viewBox="0 0 12 9" fill="currentColor" aria-hidden="true"><path d="M0 0h12v1h-12zM0 1h2v1h-2zM10 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM8 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM0 5h1v1h-1zM5 5h2v1h-2zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12z"/></svg>
+            <div>
+              <h2>Get in touch</h2>
+              <p>Questions, project ideas, or just saying hi? Or did something on the site break: a picture, a link, a typo?</p>
+            </div>
+          </div>
+
+          <div class="contact-buttons">
+            <!-- TODO: replace with your real email address -->
+            <a class="btn btn--primary" href="mailto:you@example.com"><svg class="icon" width="24" height="18" viewBox="0 0 12 9" fill="currentColor" aria-hidden="true"><path d="M0 0h12v1h-12zM0 1h2v1h-2zM10 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM8 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM7 4h1v1h-1zM11 4h1v1h-1zM0 5h1v1h-1zM5 5h2v1h-2zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12z"/></svg>Say hi</a>
+            <!-- TODO: replace your-username with your GitHub name; opens a new GitHub issue -->
+            <a class="btn btn--outline" href="https://github.com/your-username/add103_2026/issues/new" target="_blank" rel="noopener"><svg class="icon" width="6" height="24" viewBox="0 0 2 8" fill="currentColor" aria-hidden="true"><path d="M0 0h2v1h-2zM0 1h2v1h-2zM0 2h2v1h-2zM0 3h2v1h-2zM0 4h2v1h-2zM0 6h2v1h-2zM0 7h2v1h-2z"/></svg>Report a site issue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 📬 END CONTACT -->
 
 
-    </main>
-    <!-- 📝 END MAIN -->
-
+  </main>
 
     <!-- 🦶 FOOTER -->
     <footer class="site-footer">

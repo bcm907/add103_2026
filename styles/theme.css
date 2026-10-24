@@ -7,24 +7,41 @@ Specific page style pages are
 found in: styles/pages/ 
 
 
+*****
+
+AI Disclaimer
+
+Vast majority of this site and pages was built by myself and no
+course work pages were generated using AI. 
+
+Things AI was used for; Redundant tasks, catching CSS/HTML errors, making fine tuned/minor adjustments to styles and elements on pages (If I wanted a button moved over a few pixels and just couldn't figure out how), checking links, and periodically reviewing my work upon request.
+
+*****
+
+
 ***VARIABLES USED***
 bg = Background; behind everything
 surface = Cards, header, footer and shaded strips
 text = Headings and Paragraphs
 muted = Captions, Footer
-border = Borders and Rules
+border = Borders, Rules and window title bars
 accent = Links and Buttons
 accent-text = Text printed on a button
 teal = ridge borders and main theme
 red = hover color and secondary theme color
-shadow = shadow under cards
+amber = Primary button and "in progress" accents
+amber-text = Amber text that stays readable
+on-amber = Text printed on an amber button
+shadow = shadow under cards and buttons
+dots = faint dot grid on the page background
+scan = faint scanlines on cards, windows and title bars
 
 @media (prefers-color-scheme: dark) = Dark Mode
 
 Responsive reference: 
 phone = under 700px; 1 col
 tablet = 700px and up; 2 col
-desktop = 1000px and up; 3 col
+desktop = 1000px and up; sidebar (1/3) + main (2/3)
 
 Guide
 1. Variables
@@ -40,6 +57,7 @@ Guide
 11. Contact
 12. Accessibility
 13. Back link and assignment frame 
+14. Page layout: sidebar + main
 
 
 */
@@ -62,7 +80,10 @@ Guide
   --on-amber: #1a1208;
   --shadow: #0000002e;
 
-  
+  /* texture: dot grid + scanlines */
+  --dots: #00000014;
+  --scan: #00000008;
+
 }
 
 
@@ -82,6 +103,10 @@ Guide
     --amber-text: #f2a33a;
     --on-amber: #1a1208;
     --shadow: #0000008c;
+
+    /* texture: dot grid + scanlines */
+    --dots: #ffffff0f;
+    --scan: #ffffff08;
   
   }
 
@@ -98,7 +123,9 @@ body {
   font-family: Atkinson Hyperlegible, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--dots) 1px, transparent 1px);
+  background-size: 16px 16px; 
   color: var(--text);
 }
 
@@ -173,7 +200,7 @@ img {
 
 
 .section {
-  padding: 30px 0;
+  padding: 20px 0;
 
 }
 
@@ -291,6 +318,17 @@ label + title on left, link on right
 }
 
 
+.site-nav ul {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+
 .site-nav a { 
   display: block; 
   padding: 6px 14px; 
@@ -299,18 +337,29 @@ label + title on left, link on right
   text-decoration: none;
   border: 4px ridge var(--teal);
   border-radius: 10px;
+  box-shadow: 4px 4px 0 var(--shadow);
 
 }
 
 
+/* Hover = pressed halfway, click = pressed flat (same as .btn) */
 .site-nav a:hover {
   border-color: var(--red);
   color: var(--red);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--shadow);
 
 }
 
 
-.site-footer . site-nav a {
+.site-nav a:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+
+}
+
+
+.site-footer .site-nav a {
   padding: 4px 12px; 
   background: var(--bg);
   font-size: 14px;
@@ -320,20 +369,25 @@ label + title on left, link on right
 
 .site-nav a[aria-current="page"] {
   border-color: var(--teal);
-  color: var(--accent-text);
+  color: var(--text);
   font-weight: bold;
 
 }
 
 
+/* Phone: header stacks, nav becomes a column */
 @media (max-width: 699px) {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
-
   }
-  
+
+  .site-header .site-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
+
 
 
 /* --- 6. BUTTONS --- */
@@ -342,7 +396,7 @@ label + title on left, link on right
   align-items: center;
   gap: 8px;
   padding: 8px 18px;
-  border: 3px ridge var(--border);
+  border: 3px ridge var(--teal);
   border-radius: 10px;
   background: var(--surface);
   color: var(--text);
@@ -351,13 +405,24 @@ label + title on left, link on right
   cursor: pointer;
   text-align: center;
   font-weight: bold; 
+  box-shadow: 4px 4px 0 var(--shadow);
 
 }
 
 
+/* Hover = pressed halfway, click = pressed flat */
 .btn:hover {
-  border: var(--red);
+  border-color: var(--red);
   color: var(--red);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--shadow);
+
+}
+
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 
 }
 
@@ -365,7 +430,7 @@ label + title on left, link on right
 .btn--primary {
   background: var(--amber);
   color: var(--on-amber);
-  border-color: var(--amber);
+  border-color: var(--on-amber);
 
 }
 
@@ -393,6 +458,8 @@ label + title on left, link on right
   font-weight: bold;
   letter-spacing: 0.08em;
   color: var(--accent);
+  margin: 0 0 8px;
+
 }
 
 
@@ -454,6 +521,7 @@ label + title on left, link on right
   text-decoration: none;
   border: 2px ridge var(--teal);
   border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--shadow);
 }
 
 
@@ -462,9 +530,18 @@ label + title on left, link on right
 }
 
 
+/* Hover = pressed halfway, click = pressed flat (same as .btn) */
 .iconlink:hover {
   border-color: var(--red);
   color: var(--red);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--shadow);
+}
+
+
+.iconlink:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
 }
 
 
@@ -508,7 +585,8 @@ label + title on left, link on right
   justify-content: space-between;
   gap: 8px;
   padding: 5px 10px;
-  background: var(--border);
+  background-color: var(--border);
+  background-image: repeating-linear-gradient(0deg, var(--scan) 0 2px, transparent 2px 6px);
   border-bottom: 3px ridge var(--teal);
 }
 
@@ -583,6 +661,14 @@ label + title on left, link on right
   border: 3px ridge var(--teal);
   border-radius: 8px;
   box-shadow: 6px 6px 0 var(--shadow);
+}
+
+
+/* Texture: faint scanlines on surfaces (bubble + title bars have their own) */
+.card, 
+.window,
+.contact-box {
+  background-image: repeating-linear-gradient(0deg, var(--scan) 0 1px, transparent 1px 4px);
 }
 
 .card h3,
@@ -676,7 +762,8 @@ label + title on left, link on right
   max-width: 100%;
   margin-bottom: 36px;
   padding: 18px 26px 20px;
-  background: var(--surface);
+  background-color: var(--border);
+  background-image: repeating-linear-gradient(0deg, var(--scan) 0 2px, transparent 2px 6px);
   border: 3px ridge var(--teal);
   border-radius: 8px;
   box-shadow: 6px 6px 0 var(--shadow);
@@ -753,7 +840,7 @@ label + title on left, link on right
   justify-content: space-between;
   gap: 20px 32px;
   padding: 22px 26px;
-  background: var(--surface);
+  background-color: var(--surface);
   border: 6px ridge var(--teal);
   border-radius: 8px;
 }
@@ -835,111 +922,50 @@ a:focus-visible,
 
 
 
+/* --- 14. PAGE LAYOUT: SIDEBAR 1/3 + MAIN 2/3 --- */
+/* on phone = stack, desktop = side by side */
+.page-layout {
+  display: grid; 
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding: 8px 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.site-copy { 
-  margin: 0; 
 }
 
 
-.site-nav ul {
+.page-main {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-
-/* --- HEADERS --- */
-
-
-
-
-
-
-/* --- BUTTONS --- */
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  border: 3px ridge var(--border);
-  border-radius: 10px;
-  background: var(--surface);
-  border-color: var(--teal);
-  color: var(--text);
-  font: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-
-
-}
-
-.btn a:hover {
-  border-color: var(--red);
-
-}
-
-
-
-/* FRAMES */
-.frame {
-  width: 100%;
-  margin-top: 15px;
-  border: 4px ridge var(--teal);
-  border-radius: 8px;
-
-}
-
-.banner {
-  height: 180px;
-  object-fit: cover;
-  object-position: center 10%;
-  margin-top: 0;
-  margin-bottom: 15px;
-
-}
-
-/* SITE NAV RESPONSIVE */
-@media (max-width: 699px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-.site-header .site-nav ul {
   flex-direction: column;
-  gap: 10px;
-  }
+  gap: 24px; 
+  min-width: 0;
+
 }
 
+
+.sidebar h1 {
+  font-size: 40px;
+
+}
+
+
+.sidebar ul {
+  margin: 0;
+  padding-left: 20px; 
+
+}
+
+
+.sidebar li {
+  margin-bottom: 6px; 
+
+}
+
+
+@media (min-width: 1000px) {
+  .page-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-items: stretch;
+
+  }
+
+}
