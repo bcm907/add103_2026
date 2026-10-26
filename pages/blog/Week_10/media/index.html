@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- 
+🏠 PAGE: WEEK 10B
+📁 File: add103_2026/pages/blog/Week_10/
+media/index.html
+
+PURPOSE:
+Week 10B: Media page
+
+
+*****
+
+AI Disclaimer
+
+Vast majority of this site and pages was built by myself and no
+course work pages were generated using AI. 
+
+Things AI was used for; Redundant tasks, catching CSS/HTML errors, making fine tuned/minor adjustments to styles and elements on pages (If I wanted a button moved over a few pixels and just couldn't figure out how), checking links, and periodically reviewing my work upon request.
+
+*****
+
+-->
+<html lang="en">
+  <head>
+
+
+<!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&display=swap" rel="stylesheet">
+
+    <!-- Page Title and Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../../../assets/favicons/bcndcirclefavicon.png">
+    <title>Week 10B - Media Lounge</title>
+
+
+    <!-- Shared styles first, page-specific styles second -->
+    <link rel="stylesheet" href="../../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../../styles/pages/week10b.css">
+</head>
+<!-- ⚙️ END PAGE SETUP -->
+
+<body class="page-week10b">
+    <!-- 🗺️ NAV HEADER: Site title and Nav -->
+    <header class="site-header">
+
+    <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
+        <a class="site-title" href="../../../../index.html">
+            <img src="../../../../assets/logos/bcndlabslogo.png" alt="BCnD Labs logo">
+        </a>
+
+        <nav class="site-nav" aria-label="Main">
+            <ul>
+                <li><a href="../../../../index.html">Home</a></li>
+                <li><a href="../../blog.html" aria-current="page">Blog</a></li>
+                <li><a href="../../../about/about.html">About</a></li>
+                <!--  <li><a href="pages/projects/projects.html">Projects</a></li> -->
+                <li><a href="../../../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- 🗺️ END NAV HEADER -->
+
+    <header class="container">
+        <h1>Media Lounge</h1>
+        <p>A place for music and video!</p>
+
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="../../../../assets/blog_images/week_10B/BWwaveform.mp4" type="video/mp4">
+        Your browser does not support video.
+        </video>
+    </header>
+
+
+<!-- BEGIN MAIN -->
+<main class="container">
+    <!-- BEGIN AUDIO PLAYER -->
+    <section class="audio-section">
+        <h2>Flamenco Chords</h2>
+
+        <audio controls preload="metadata">
+            <source src="../../../../assets/blog_images/week_10B/flamencochords.mp3"
+                type="audio/mpeg">
+            Your browser does not support the audio player.
+            <a href="../../../../assets/blog_images/week_10B/flamencochords.mp3">Download the audio.</a>
+        </audio>
+    </section>
+    <!-- END AUDIO PLAYER -->
+
+    <!-- YOUTUBE VIDEO -->
+    <section>
+        <h2>My dog Denali over her first year!</h2>
+
+        <div class="youtube-player">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jRsF86QNAw8?si=00ygEKpJ1u4WU-k_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- END YOUTUBE VIDEO -->
+</main>
+<!-- END MAIN -->
+
+    <!-- 🦶 FOOTER -->
+    <footer class="site-footer">
+    <p class="site-copy">&copy; BCnDNS_Labs<!-- <a href="https://github.com/BCnD-Labs">github</a> . <a href="mailto:bcndlabs@pm.me>Email</a>" --></p>
+
+    <nav class="site-nav" aria-label="Footer">
+        <ul>
+        <li><a href="../../../../index.html">Home</a></li>
+        <li><a href="../../blog.html" aria-current="page">Blog</a></li>
+        <li><a href="../../../about/about.html">About</a></li>
+        <li><a href="../../../contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </footer>
+    <!-- 🦶 END FOOTER -->
+
+
+</body>
+</html>
