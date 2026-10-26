@@ -1,0 +1,177 @@
+<!doctype html>
+<!-- 
+🏠 PAGE: WEEK 10A
+📁 File: add103_2026/pages/blog/Week_10/
+responsive_images/index.html
+
+PURPOSE:
+main landing page
+
+
+*****
+
+AI Disclaimer
+
+Vast majority of this site and pages was built by myself and no
+course work pages were generated using AI. 
+
+Things AI was used for; Redundant tasks, catching CSS/HTML errors, making fine tuned/minor adjustments to styles and elements on pages (If I wanted a button moved over a few pixels and just couldn't figure out how), checking links, and periodically reviewing my work upon request.
+
+*****
+
+-->
+<html lang="en">
+  <head>
+
+
+<!-- ⚙️ PAGE SETUP: Metadata, font, favicon, title, and css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+10&display=swap" rel="stylesheet">
+
+    <!-- Page Title and Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../../../assets/favicons/bcndcirclefavicon.png">
+    <title>Week 10A - Pixel Wildlife</title>
+
+    <!-- Shared styles first, page-specific styles second -->
+    <link rel="stylesheet" href="../../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../../styles/pages/week10a.css">
+</head>
+<!-- ⚙️ END PAGE SETUP -->
+
+<body class="page-week10a">
+    <!-- 🗺️ NAV HEADER: Site title and Nav -->
+    <header class="site-header">
+
+    <!-- Link returns to homepage (Already on homepage so wont really do anything) -->
+    <a class="site-title" href="../../../../index.html">
+        <img src="../../../../assets/logos/bcndlabslogo.png" alt="BCnD Labs logo">
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+        <ul>
+            <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="../../blog.html" aria-current="page">Blog</a></li>
+            <li><a href="../../../about/about.html">About</a></li>
+            <!--  <li><a href="pages/projects/projects.html">Projects</a></li> -->
+            <li><a href="../../../contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- 🗺️ END NAV HEADER -->
+
+
+<header class="container">
+    <h1>Pixel Wildlife</h1>
+    <p>Wildlife reimagined in pixel art.</p>
+</header>
+
+    <!-- BEGIN MAIN -->
+    <main class="container">
+
+        <!-- BEGIN WILDLIFE HERO -->
+        <section class="wildlife-hero">
+            <h2>Moose</h2>
+
+            <!-- MOOSE IMG -->
+            <picture>
+                <!-- CLOSEUP - MOBILE -->
+                <source
+                    media="(max-width: 767px)"
+                    srcset="../../../../assets/blog_images/week_10A/moose-mobile-768.webp"
+                    width="768"
+                    height="960">
+
+
+                <img 
+                    src="../../../../assets/blog_images/week_10A/moose-hero-1200.webp"
+                    srcset="../../../../assets/blog_images/week_10A/moose-hero-480.webp 480w, 
+                            ../../../../assets/blog_images/week_10A/moose-hero-800.webp 800w,
+                            ../../../../assets/blog_images/week_10A/moose-hero-1200.webp 1200w"
+                    sizes="(min-width: 1100px) 1060px, calc(100vw - 40px)"
+                    width="1200"
+                    height="675"
+                    alt="Pixel art moose walking through water">
+
+            </picture>
+            <!-- END MOOSE IMG -->
+        </section>
+        <!-- END WILDLIFE HERO -->
+
+        <!-- WILDLIFE GALLERY -->
+        <section class="wildlife-gallery">
+            <h2>Meet the Wildlife</h2>
+
+            <div class="wildlife-grid">
+                <figure>
+                    <img src="../../../../assets/blog_images/week_10A/moose-gallery.webp"
+                        alt="Pixel art moose walking through water"
+                        loading="lazy">
+                    <figcaption>Moose</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../../../../assets/blog_images/week_10A/reindeer-gallery.webp"
+                        alt="Pixel art reindeer standing in a snowy landscape"
+                        loading="lazy">
+                    <figcaption>Reindeer</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img src="../../../../assets/blog_images/week_10A/bear-gallery.webp"
+                        alt="Pixel art polar bear sitting upright waving with one paw"
+                        loading="lazy">
+                    <figcaption>Polar Bear</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../../../../assets/blog_images/week_10A/eagle-gallery.webp"
+                        alt="Pixel art eagle flying over water"
+                        loading="lazy">
+                    <figcaption>Eagle</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../../../../assets/blog_images/week_10A/elk-gallery.webp"
+                        alt="Pixel art elk with large antlers"
+                        loading="lazy">
+                    <figcaption>Elk</figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- END WILDLIFE GALLERY -->
+
+    </main>
+    <!-- END MAIN   -->
+
+
+
+
+
+
+
+
+
+    <!-- 🦶 FOOTER -->
+    <footer class="site-footer">
+    <p class="site-copy">&copy; BCnDNS_Labs<!-- <a href="https://github.com/BCnD-Labs">github</a> . <a href="mailto:bcndlabs@pm.me>Email</a>" --></p>
+
+    <nav class="site-nav" aria-label="Footer">
+        <ul>
+        <li><a href="../../../../index.html">Home</a></li>
+        <li><a href="../../blog.html" aria-current="page">Blog</a></li>
+        <li><a href="../../../about/about.html">About</a></li>
+        <li><a href="../../../contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </footer>
+    <!-- 🦶 END FOOTER -->
+
+
+</body>
+</html>

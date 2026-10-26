@@ -1,0 +1,100 @@
+/*
+🏠 WEEK10A STYLES
+
+Theme styles are located in:
+../theme.css
+
+
+*****
+
+AI Disclaimer
+
+Vast majority of this site and pages was built by myself and no
+course work pages were generated using AI. 
+
+Things AI was used for; Redundant tasks, catching CSS/HTML errors, making fine tuned/minor adjustments to styles and elements on pages (If I wanted a button moved over a few pixels and just couldn't figure out how), checking links, and periodically reviewing my work upon request.
+
+*****
+
+
+Guide
+1. Resonsive Hero
+2. Wildlife Gallery
+
+
+
+*/
+
+
+/* 1. RESPONSIVE HERO */
+.wildlife-hero {
+    margin: 24px 0;
+
+}
+
+.wildlife-hero img {
+    width: 100%;
+    height: auto;
+    border: 3px ridge var(--teal);
+    border-radius: 8px;
+    image-rendering: pixelated;
+
+}
+
+/* 2. WILDLIFE GALLERY */
+.wildlife-gallery {
+    margin: 32px 0;
+}
+
+
+.wildlife-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+}
+
+
+.wildlife-grid figure {
+    margin: 0;
+    padding: 12px;
+    background: var(--surface);
+    border: 3px ridge var(--teal);
+    border-radius: 8px;
+
+}
+
+
+.wildlife-grid img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+
+}
+
+
+.wildlife-grid figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+
+@media (max-width: 767px) {
+    .wildlife-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .wildlife-grid {
+        grid-template-columns: minmax(0, 1fr);
+
+    }
+
+}
+

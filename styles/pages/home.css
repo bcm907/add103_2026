@@ -158,18 +158,35 @@ Guide
 }
 
 
+.identity {
+  display: grid; 
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+
+}
+
+
+
 .identity-role {
-  display: flex; 
-  align-items: center; 
-  gap: 15px;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 
 }
 
 
 .identity-role img {
-  width: 35px;
-  height: 35px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   flex-shrink: 0;
 
