@@ -60,6 +60,15 @@ Guide
 
 }
 
+.posts-archive .card-links {
+  align-items: flex-start;
+}
+
+.posts-archive .card-links a {
+  text-decoration: underline;
+  transform-origin: left center;
+}
+
 
 @media (min-width: 700px) {
   .posts-archive {

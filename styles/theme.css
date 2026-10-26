@@ -367,11 +367,25 @@ label + title on left, link on right
 }
 
 
-.site-nav a[aria-current="page"] {
-  border-color: var(--teal);
-  color: var(--text);
+.site-nav a[aria-current] {
+  background: color-mix(in srgb, var(--surface) 70%, var(--muted));
+  border-color: var(--muted);
+  color: var(--muted);
   font-weight: bold;
+  scale: 0.94;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
 
+.site-footer .site-nav a[aria-current] {
+  background: color-mix(in srgb, var(--surface) 70%, var(--muted));
+}
+
+.site-nav a[aria-current]:hover {
+  border-color: var(--red);
+  color: var(--red);
+  filter: none;
+  opacity: 1;
 }
 
 
@@ -663,6 +677,72 @@ label + title on left, link on right
   box-shadow: 6px 6px 0 var(--shadow);
 }
 
+/* Shared depth feedback for panels and their smaller visual pieces. */
+:is(.site-header, .site-footer, .card, .hero-text, .window, .frame, .bubble, .avatar,
+    .contact-box, .reportcard, .ph, .assignment-frame, .chip,
+    .field input, .field textarea) {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.site-title {
+  transition: scale 160ms ease, filter 160ms ease;
+  transform-origin: center;
+}
+
+@media (hover: hover) {
+  :is(.site-header, .site-footer, .card, .hero-text, .window, .frame, .bubble, .avatar,
+      .contact-box, .reportcard, .ph, .assignment-frame, .chip,
+      .field input, .field textarea):hover {
+    transform: scale(1.012);
+    box-shadow: 2px 3px 6px color-mix(in srgb, var(--shadow) 35%, transparent);
+  }
+
+  :is(.card, .hero-text, .frame, .bubble):hover {
+    box-shadow: 7px 7px 0 var(--shadow);
+  }
+
+  .site-title:hover {
+    scale: 1.012;
+    filter: drop-shadow(1px 2px 3px color-mix(in srgb, var(--shadow) 35%, transparent));
+  }
+
+  :is(.site-nav a, .btn, .iconlink):hover {
+    transform: none;
+    box-shadow: 5px 5px 0 var(--shadow);
+  }
+
+  .iconlink:hover {
+    box-shadow: 4px 4px 0 var(--shadow);
+  }
+}
+
+.site-title:active {
+  scale: 0.98;
+}
+
+:is(.site-nav a, .btn, .iconlink):active {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.site-header, .site-footer, .card, .hero-text, .window, .frame, .bubble, .avatar,
+      .contact-box, .reportcard, .ph, .assignment-frame, .chip,
+      .field input, .field textarea, .site-title) {
+    transition: none;
+  }
+
+  :is(.site-header, .site-footer, .card, .hero-text, .window, .frame, .bubble, .avatar,
+      .contact-box, .reportcard, .ph, .assignment-frame, .chip,
+      .field input, .field textarea):hover {
+    transform: none;
+  }
+
+  .site-title:hover {
+    scale: none;
+  }
+}
+
 
 /* Texture: faint scanlines on surfaces (bubble + title bars have their own) */
 .card, 
@@ -781,10 +861,10 @@ label + title on left, link on right
   content: "";
   position: absolute;
   top: 100%;
-  left: 36px;
+  left: 75px;
   width: 30px;
-  height: 30px;
-  margin-top: -3px;
+  height: 35px;
+  margin-top: 0;
   background: var(--teal);
   clip-path: polygon(0 0, 100% 0, 100% 20%, 80% 20%, 80% 40%, 60% 40%, 60% 60%, 40% 60%, 40% 80%, 20% 80%, 20% 100%, 0 100%);
 }
@@ -893,6 +973,44 @@ label + title on left, link on right
   }
 }
 
+
+/* Subtle hover and press feedback for links and buttons */
+:where(a:not(.site-title)) {
+  display: inline-block;
+  transform-origin: left center;
+}
+
+:where(a:not(.site-title), button) {
+  transition: scale 120ms ease, box-shadow 160ms ease;
+}
+
+:where(.site-nav a, .btn, .iconlink, button) {
+  transform-origin: center;
+}
+
+@media (hover: hover) {
+  :where(a:not(.site-title), button):hover {
+    scale: 1.015;
+  }
+
+  :is(.site-nav a, .btn, .iconlink, button):hover {
+    scale: 1.04;
+  }
+}
+
+:where(a:not(.site-title), button):active {
+  scale: 0.98;
+}
+
+:is(.site-nav a, .btn, .iconlink, button):active {
+  scale: 0.98;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(a:not(.site-title), button) {
+    transition: none;
+  }
+}
 
 /* --- 12. ACCESSIBILITY --- */
 a:focus-visible,

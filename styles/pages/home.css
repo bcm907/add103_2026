@@ -25,6 +25,14 @@ Guide
 
 */
 
+.avatar img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  
+}
+
 
 
 /* --- 1. HERO (LEFT BOX) --- */
@@ -107,6 +115,18 @@ Guide
 
 }
 
+
+.identity-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.identity-heading > span:last-child {
+  text-align: right;
+}
 
 /* 3 recent posts: stacked on phone, 3 across on tablet and up */
 .featured-posts {
