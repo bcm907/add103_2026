@@ -30,7 +30,7 @@ Guide
   width: 96px;
   height: 96px;
   object-fit: contain;
-  
+
 }
 
 
@@ -154,5 +154,23 @@ Guide
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
   }
+
+}
+
+
+.identity-role {
+  display: flex; 
+  align-items: center; 
+  gap: 15px;
+  margin-bottom: 4px;
+
+}
+
+
+.identity-role img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  flex-shrink: 0;
 
 }
