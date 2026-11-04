@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="192" height="96" viewBox="0 0 64 32"
+     shape-rendering="crispEdges">
+  <!-- Roof and body -->
+  <path fill="#0b7f88"
+        d="M18 6h24v4h6v6h10v4h4v8H2V18h10v-8h6z"/>
+
+  <!-- Windows -->
+  <rect x="19" y="10" width="9" height="8" fill="#dfe2e6"/>
+  <rect x="32" y="10" width="9" height="8" fill="#dfe2e6"/>
+
+  <!-- Bumper and lights -->
+  <rect x="2" y="24" width="60" height="4" fill="#3f464f"/>
+  <rect x="56" y="18" width="6" height="4" fill="#f2a33a"/>
+  <rect x="2" y="18" width="4" height="4" fill="#c4271d"/>
+
+  <!-- Wheels -->
+  <rect x="10" y="23" width="12" height="9" fill="#1a1c1e"/>
+  <rect x="44" y="23" width="12" height="9" fill="#1a1c1e"/>
+  <rect x="14" y="26" width="4" height="4" fill="#9aa1ab"/>
+  <rect x="48" y="26" width="4" height="4" fill="#9aa1ab"/>
+</svg>

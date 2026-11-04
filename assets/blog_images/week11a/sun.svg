@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="128" height="128" viewBox="0 0 32 32"
+     shape-rendering="crispEdges">
+  <!-- Rays -->
+  <path fill="#b5813b"
+        d="M14 0h4v6h-4z M14 26h4v6h-4z
+           M0 14h6v4H0z M26 14h6v4h-6z
+           M4 4h4v4H4z M24 4h4v4h-4z
+           M4 24h4v4H4z M24 24h4v4h-4z"/>
+
+  <!-- Sun -->
+  <path fill="#d6a24a"
+        d="M12 7h8v3h3v3h3v6h-3v3h-3v3h-8v-3H9v-3H6v-6h3v-3h3z"/>
+</svg>
