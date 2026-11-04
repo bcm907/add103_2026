@@ -1,0 +1,89 @@
+<!-- 
+
+WEEK 11: DOM GALLERY
+ 
+
+NOTES: 
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN PAGE SETUP -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11B - DOM Gallery</title>
+
+    <link rel="stylesheet" href="../../../../styles/theme.css">
+    <link rel="stylesheet" href="../../../../styles/pages/week11b.css">
+
+</head>
+<!-- END PAGE SETUP -->
+<!-- BEGIN BODY -->
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="container">
+        <h1>Music Gear Gallery</h1>
+        <p>Click a thumbnail to preview it.</p>
+
+    </header>
+    <!-- END HEADER -->
+    
+    <!-- BEGIN MAIN -->
+    <main class="container">
+
+        <!-- BEGIN GALLERY -->
+        <div class="grid-container">
+
+            <img src="../../../../assets/blog_images/week11b/acoustic1.jpg" alt="Acoustic guitar" onclick="change('../../../../assets/blog_images/week11b/acoustic1.jpg', 'Acoustic guitar')">
+
+            <img src="../../../../assets/blog_images/week11b/amp1.jpg" alt="Amplifier" onclick="change('../../../../assets/blog_images/week11b/amp1.jpg', 'Amplifier')">
+
+            <img src="../../../../assets/blog_images/week11b/electricguitar.jpg" alt="Electric guitar" onclick="change('../../../../assets/blog_images/week11b/electricguitar.jpg', 'Electric guitar')">
+
+            <img src="../../../../assets/blog_images/week11b/recordplayer1.jpg" alt="Record player" onclick="change('../../../../assets/blog_images/week11b/recordplayer1.jpg', 'Record player')">
+
+            <img src="../../../../assets/blog_images/week11b/recordstore.jpg" alt="Record store" onclick="change('../../../../assets/blog_images/week11b/recordstore.jpg', 'Record store')">
+
+
+        </div>
+
+        <figure>
+            <img id="large" src="../../../../assets/blog_images/week11b/acoustic1.jpg" alt="Acoustic guitar">
+            <figcaption id="caption">Acoustic guitar</figcaption>
+        </figure>
+
+        <div class="color-buttons">
+
+            <button onclick="setBgColor('#1f1b24')">Purple</button>
+            <button onclick="setBgColor('#2b4ca5')">Blue</button>
+            <button onclick="setBgColor('#3b1d1d')">Red</button>
+
+        </div>
+        <!-- END GALLERY -->
+
+    <!-- END MAIN -->
+    </main>
+
+
+
+    <!-- BEGIN FOOTER -->
+    <footer>
+        <a href="../../blog.html">Back to Portal</a>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+<!-- END BODY -->
+</body>
+
+
+</html>
