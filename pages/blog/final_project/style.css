@@ -1,0 +1,33 @@
+/*
+Path: styles/style.css
+Page styles for the Mikoshi showcase homepage.
+Colors come from theme.css variables, so nothing is hard-coded here.
+*/
+
+/* Image placeholder: swap each for <img> when image ready */
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 12px;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ph--hero { min-height: 320px; }
+.ph--thumb { min-height: 110px; }
+
+.hero-intro { max-width: 60ch; }
+
+/* Three cards: 1 column on phone, 3 on desktop */
+@media (min-width: 1000px) {
+  .row--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
